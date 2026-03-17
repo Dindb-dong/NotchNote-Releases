@@ -1,0 +1,4 @@
+*.app
+.env
+*.zip
+*.DS_Store
