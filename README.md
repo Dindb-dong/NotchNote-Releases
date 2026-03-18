@@ -1,203 +1,179 @@
-# NotchNote Releases
+# NotchNote
 
 [한국어](#korean) | [English](#english)
+
+![NotchNote app icon](assets/app-logo.jpeg)
 
 <a id="korean"></a>
 ## 한국어
 
-이 디렉터리는 NotchNote 공개 배포용 문서를 담고 있습니다.
+NotchNote는 현재 보고 있는 앱, 브라우저, 프로젝트, 터미널 세션의 맥락을 따라다니며 메모를 연결해주는 macOS 메모 앱입니다.
 
-### 스크린샷 미리보기
+호버로 빠르게 열 수도 있고, 전역 단축키로 바로 열 수도 있습니다. 메모는 단순한 텍스트 저장이 아니라, 카테고리별 정리, 투두 관리, 리마인더, 백업/복원까지 하나의 흐름으로 이어집니다.
 
-릴리즈 저장소에는 아래 순서대로 스크린샷을 두는 것을 권장합니다. 이미지 파일은 `assets/` 아래에 넣어두면 됩니다.
+### 다운로드
 
-권장 파일명:
+- GitHub Release에서 `NotchNote.zip`을 다운로드하세요.
+- `Source code (zip)` / `Source code (tar.gz)`는 설치 파일이 아닙니다.
+- 압축 해제 후 `NotchNote.app`을 실행하면 됩니다.
 
-- `hero-overlay.png`
-- `quick-capture-overlay.png`
-- `library-workspace.png`
-- `onboarding-shortcut.png`
-- `keychain-password-prompt.png`
+### 이런 분께 잘 맞습니다
 
-대표 스크린샷:
+- 여러 프로젝트를 오가며 컨텍스트별 메모를 따로 남기고 싶은 분
+- 브라우저 탭, IDE 프로젝트, 터미널 세션까지 이어서 기록하고 싶은 분
+- 마크다운 편집과 체크리스트를 한 앱 안에서 같이 쓰고 싶은 분
+- 카테고리별 리마인더, 보관 기간, 백업/복원까지 직접 관리하고 싶은 분
 
-`hero-overlay.png`
-![NotchNote hero overlay](assets/hero-overlay.png)
+### 대표 화면
 
-추천 배치 이유:
+현재 작업 중인 앱 위에서 바로 메모를 여는 흐름입니다.
 
-- `hero-overlay.png`: 노치/상단 오버레이라는 제품의 첫인상을 바로 전달
-- `quick-capture-overlay.png`: 현재 앱 컨텍스트에 붙는 메모 경험을 설명할 때 사용
-- `library-workspace.png`: Library와 카드/투두 구조를 보여줄 때 사용
-- `onboarding-shortcut.png`: 첫 실행 설정과 단축키 녹화 경험을 보여줄 때 사용
-- `keychain-password-prompt.png`: 첫 실행 시 비밀번호 프롬프트가 정상 동작임을 미리 안내할 때 사용
+![NotchNote desktop hero](assets/hero-desktop-overlay.jpeg)
 
-### 핵심 화면
+### 주요 기능
 
-#### 1. 빠른 캡처
+#### 1. 바로 열리는 컨텍스트 메모
 
-현재 작업 중인 앱 맥락으로 바로 메모를 여는 장면입니다.
+hover 또는 전역 단축키로 overlay를 열면, 지금 보고 있는 맥락에 맞는 메모가 이어집니다.
 
-![Quick capture overlay](assets/quick-capture-overlay.png)
+![Onboarding and shortcut setup](assets/onboarding-shortcut.jpeg)
 
-#### 2. Library 워크스페이스
+#### 2. Library에서 한 번에 정리
 
-왼쪽 투두 목록과 오른쪽 카드형 메모를 함께 관리하는 장면입니다.
+왼쪽은 카테고리 투두, 오른쪽은 전체 메모 카드입니다. 두 영역은 서로 연결되어 있고, 컨텍스트별로 빠르게 다시 열 수 있습니다.
 
-![Library workspace](assets/library-workspace.png)
+![Library workspace overview](assets/library-workspace.jpeg)
 
-#### 3. 첫 설정과 단축키
+#### 3. 카테고리별 리마인더
 
-처음 실행 시 권한/단축키를 잡는 흐름을 보여주는 장면입니다.
+카테고리마다 미완료 투두를 다시 알려주는 주기를 다르게 설정할 수 있습니다.
 
-![Onboarding shortcut setup](assets/onboarding-shortcut.png)
+![Reminder settings](assets/settings-1.jpeg)
 
-### 배포 범위
+#### 4. 카테고리 규칙과 프라이버시 설정
 
-NotchNote는 독점 소프트웨어로 배포됩니다.
+앱/브라우저 규칙, 프라이빗 앱/URL, 보관 기간 같은 정책을 직접 관리할 수 있습니다.
 
-- 애플리케이션 소스 코드는 오픈소스로 제공되지 않습니다.
-- 릴리즈 자산은 승인된 최종 사용자 사용만을 위해 제공됩니다.
-- 애플리케이션 및 관련 자산을 복사, 수정, 재배포, 재패키징할 권한은 부여되지 않습니다.
+![Category and browser rules](assets/setting-2.jpeg)
 
-### 첫 실행 보안 안내
+![Privacy and retention settings](assets/setting-3.jpeg)
 
-처음 실행할 때 macOS가 로그인 비밀번호를 요구할 수 있습니다. 이는 NotchNote가 로컬 메모 데이터베이스 키를 macOS Keychain에 안전하게 생성하거나 읽기 위해 필요한 정상 동작입니다.
+#### 5. 백업과 복원
 
-- 이 프롬프트는 정상입니다.
-- NotchNote는 로컬 데이터베이스 키를 사용자의 Mac Keychain에 안전하게 저장합니다.
-- 로그인 비밀번호는 NotchNote가 수집하거나 전송하지 않으며, macOS Keychain 시스템 UI에서만 처리됩니다.
-- 이 프롬프트를 거부하면 로컬 메모 데이터베이스를 정상적으로 열지 못할 수 있습니다.
+메모 DB와 설정을 JSON으로 내보내고, additive import 방식으로 안전하게 다시 가져올 수 있습니다.
 
-권장 스크린샷:
+![Backup workspace](assets/backup.jpeg)
 
-`keychain-password-prompt.png`
-![Keychain password prompt](assets/keychain-password-prompt.png)
+### 첫 실행 안내
 
-이 이미지는 사용자가 "왜 비밀번호를 요구하지?"라고 가장 먼저 불안해할 수 있는 지점을 미리 설명해주는 용도로 넣는 것이 좋습니다.
+처음 실행할 때 macOS가 로그인 비밀번호를 요청할 수 있습니다. 이것은 NotchNote가 로컬 데이터베이스 키를 macOS Keychain에 안전하게 저장하거나 읽기 위한 정상 동작입니다.
 
-### 지식재산권
+- 이 비밀번호는 NotchNote가 직접 수집하지 않습니다.
+- macOS Keychain 시스템 UI에서만 처리됩니다.
+- 이 과정을 거쳐야 로컬 메모 데이터베이스를 정상적으로 열 수 있습니다.
 
-NotchNote는 독점 제품입니다. 구현 방식, 사용자 경험, 시각적 표현, 컨텍스트 기반 동작, 메모 그룹핑 모델, 온보딩 흐름, 리마인더 흐름, 인터랙션 설계 및 관련 제품 결정은 법이 허용하는 최대 범위까지 독점 자료로 보호됩니다.
+![Keychain](assets/keychain.jpeg)
 
-여기에는 다음이 포함되며 이에 한정되지 않습니다.
+### 배포 안내
 
-- 앱 이름과 브랜딩
-- 아이콘 및 그래픽 자산
-- 인터페이스 문구와 스크린샷
-- 릴리즈 패키지
-- 제품 흐름과 고유한 상호작용 패턴
-- 컨텍스트 기반 메모 캡처 및 그룹핑 동작
-- 에디터, 라이브러리, 백업, 온보딩, 리마인더 경험 설계
+- NotchNote는 macOS용 독점 소프트웨어로 배포됩니다.
+- 소스코드는 공개되지 않습니다.
+- 자세한 조건은 아래 문서를 확인해주세요.
 
-사전 서면 허가 없이 이러한 자료를 복제, 모방, 변형, 상업화하거나 실질적으로 유사한 경쟁 제품을 만드는 것은 허용되지 않습니다.
-
-### 문서 구성
+### 문서
 
 - [LICENSE.md](LICENSE.md)
 - [EULA.md](EULA.md)
-
-### 사용 목적
-
-이 문서들은 NotchNote 공개 배포 저장소, GitHub Releases 페이지, 또는 다운로드 가능한 릴리즈 압축 파일과 함께 제공되도록 작성되었습니다.
 
 ---
 
 <a id="english"></a>
 ## English
 
-This directory contains public-release support documents for NotchNote.
+NotchNote is a macOS note app that keeps your notes attached to the context you are actually working in, including apps, browser tabs, projects, and terminal sessions.
 
-### Screenshot Preview
+You can open it by hover or by a global shortcut. It goes beyond simple note capture by connecting markdown editing, checklists, categories, reminders, and backup/restore into one workflow.
 
-For the public release repository, it is worth placing screenshots in the following order. Put the image files under `assets/`.
+### Download
 
-Recommended filenames:
+- Download `NotchNote.zip` from the GitHub Release page.
+- `Source code (zip)` and `Source code (tar.gz)` are not installable app builds.
+- Unzip the file and launch `NotchNote.app`.
 
-- `hero-overlay.png`
-- `quick-capture-overlay.png`
-- `library-workspace.png`
-- `onboarding-shortcut.png`
-- `keychain-password-prompt.png`
+### Great For
 
-Hero screenshot:
+- people juggling multiple projects and wanting separate notes per context
+- people who want browser, IDE, and terminal-aware memo continuity
+- people who want markdown editing and checklists in the same app
+- people who want category-level reminders, retention rules, and backups under their own control
 
-`hero-overlay.png`
-![NotchNote hero overlay](assets/hero-overlay.png)
+### Hero Screen
 
-Why this layout works:
+Open the memo overlay directly on top of the app you are currently using.
 
-- `hero-overlay.png`: immediately shows the notch/top-edge identity of the product
-- `quick-capture-overlay.png`: explains the context-aware capture experience
-- `library-workspace.png`: shows the Library split between todos and memo cards
-- `onboarding-shortcut.png`: shows first-run setup and shortcut recording
-- `keychain-password-prompt.png`: explains that the first-run password dialog is an expected macOS Keychain prompt
+![NotchNote desktop hero](assets/hero-desktop-overlay.jpeg)
 
-### Core Screens
+### Key Features
 
-#### 1. Quick Capture
+#### 1. Context-aware quick capture
 
-Show the overlay attached to the current app context.
+Open the overlay by hover or global shortcut and continue writing in the memo for the current context.
 
-![Quick capture overlay](assets/quick-capture-overlay.png)
+![Onboarding and shortcut setup](assets/onboarding-shortcut.jpeg)
 
-#### 2. Library Workspace
+#### 2. Organize everything in Library
 
-Show the left todo list and the right memo-card workspace together.
+The left side is a category todo workspace, and the right side is a full memo-card view. Both stay connected to the same underlying notes.
 
-![Library workspace](assets/library-workspace.png)
+![Library workspace overview](assets/library-workspace-overview.jpeg)
 
-#### 3. First-Run Setup and Shortcut
+#### 3. Drag and drop memo cards
 
-Show the onboarding step where permissions and the global shortcut are configured.
+Memo cards in the right column can be dragged into another category.
 
-![Onboarding shortcut setup](assets/onboarding-shortcut.png)
+![Library drag and drop](assets/library-drag-drop.jpeg)
 
-### Distribution Scope
+#### 4. Category todo space
 
-NotchNote is distributed as proprietary software.
+The left pane is optimized for scanning unfinished tasks by context and category.
 
-- The application source code is not open source.
-- Release assets are provided only for authorized end-user use.
-- No permission is granted to copy, modify, redistribute, or repackage the application or its assets.
+![Library todo pane](assets/library-todo-flexibility.jpeg)
 
-### First Launch Security Note
+#### 5. Rules, privacy, and retention controls
 
-On first launch, macOS may ask for your login password so NotchNote can create or read its database key in Keychain.
+Manage app/browser rules, private app or URL filters, and category retention policies yourself.
 
-- This prompt is expected.
-- NotchNote uses Keychain to store the local database key securely on your Mac.
-- Your login password is handled by macOS Keychain access UI, not collected or transmitted by NotchNote.
-- If you deny the prompt, the app may not be able to open its local memo database correctly.
+![Category and browser rules](assets/settings-category-rules.jpeg)
 
-Recommended screenshot:
+![Privacy and retention settings](assets/settings-retention-privacy.jpeg)
 
-`keychain-password-prompt.png`
-![Keychain password prompt](assets/keychain-password-prompt.png)
+#### 6. Per-category reminders
 
-This image is worth including because it preemptively explains the one screen most likely to make a new user uneasy during first launch.
+Set different reminder intervals for unfinished todos in each category.
 
-### Intellectual Property
+![Reminder settings](assets/settings-reminders.jpeg)
 
-NotchNote is a proprietary product. Its implementation, user experience, visual presentation, context-aware behavior, memo-grouping model, onboarding flow, reminder flow, interaction design, and related product decisions are protected as proprietary materials to the fullest extent permitted by law.
+#### 7. Backup and restore
 
-This includes, without limitation:
+Export your memo database and settings to JSON, then restore them safely with additive import.
 
-- app name and branding
-- icons and graphic assets
-- interface copy and screenshots
-- release packages
-- product flows and distinctive interaction patterns
-- context-aware memo capture and grouping behavior
-- editor, library, backup, onboarding, and reminder experience design
+![Backup workspace](assets/backup-workspace.jpeg)
 
-No person or organization may reproduce, imitate, adapt, or commercialize these materials or build a substantially similar competing product from them without prior written permission.
+### First Launch Note
 
-### Contents
+On first launch, macOS may ask for your login password. This is expected and is used so NotchNote can safely store or retrieve its local database key from macOS Keychain.
+
+- NotchNote does not directly collect your password.
+- The prompt is handled by macOS Keychain UI.
+- Approving it allows the app to open its local memo database correctly.
+
+### Distribution
+
+- NotchNote is distributed as proprietary macOS software.
+- The source code is not public.
+- For full terms, please see the documents below.
+
+### Documents
 
 - [LICENSE.md](LICENSE.md)
 - [EULA.md](EULA.md)
-
-### Intended Use
-
-These files are meant to accompany a public distribution repository, GitHub Releases page, or downloadable release archive for NotchNote.
