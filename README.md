@@ -18,6 +18,7 @@ NotchNote는 현재 보고 있는 앱, 브라우저, 프로젝트, 터미널 세
 ### 다운로드
 
 - GitHub Release에서 `NotchNote.zip`을 다운로드하세요.
+[다운로드 링크](https://github.com/Dindb-dong/NotchNote-Releases/releases)
 - `Source code (zip)` / `Source code (tar.gz)`는 설치 파일이 아닙니다.
 - 압축 해제 후 `NotchNote.app`을 실행하면 됩니다.
 
@@ -101,6 +102,7 @@ You can open it by hover or by a global shortcut. It goes beyond simple note cap
 ### Download
 
 - Download `NotchNote.zip` from the GitHub Release page.
+[Download](https://github.com/Dindb-dong/NotchNote-Releases/releases) 
 - `Source code (zip)` and `Source code (tar.gz)` are not installable app builds.
 - Unzip the file and launch `NotchNote.app`.
 
