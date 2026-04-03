@@ -1,0 +1,90 @@
+<?xml version="1.0" standalone="yes"?><!-- sparkle-sign-warning:
+IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
+--><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>NotchNote</title>
+        <item>
+            <title>1.4.0</title>
+            <pubDate>Sat, 04 Apr 2026 00:23:59 +0900</pubDate>
+            <link>https://github.com/Dindb-dong/NotchNote-Releases/releases/tag/v1.4.0</link>
+            <sparkle:version>10</sparkle:version>
+            <sparkle:shortVersionString>1.4.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[# NotchNote 1.4.0 Release Notes
+
+## Korean
+
+### 주요 변경
+
+- 캘린더 전용 투두 워크스페이스 추가
+  - Library 하단에 미니 캘린더가 생겼고, 별도 `Calendar` 창에서 월간 뷰로 일정을 관리할 수 있습니다.
+  - 특정 날짜를 누르면 날짜 상세 모달이 열리고, 카테고리 없는 캘린더 전용 투두를 여러 개 작성하거나 완료할 수 있습니다.
+  - D-DAY를 따로 지정하면 해당 날짜에도 `[D-DAY]` 일정이 함께 반영되도록 정리했습니다.
+
+- Google 캘린더 연동 흐름 개선
+  - 캘린더 사용 전 안내 모달을 통해, 휴대폰에서도 일정을 보려면 같은 Google 계정을 연결해야 한다는 점을 먼저 설명합니다.
+  - 이 Mac에 연결된 Google 캘린더 중 업로드 대상을 직접 고를 수 있게 바꿨습니다.
+  - 저장 버튼과 연동 상태 문구를 추가해, 앱 내부 저장인지 실제 Google 캘린더 연동이 끝났는지 더 분명하게 보여줍니다.
+
+- 캘린더 UI 디테일 다듬기
+  - 사이드 패널 미니 캘린더를 더 촘촘한 구조로 다시 다듬고, 요일 헤더·오늘 날짜·셀 정보 배치를 정리했습니다.
+  - 날짜 상세 모달은 바깥 영역을 눌러 닫을 수 있고, 우측 액션도 `취소` 대신 `닫기`로 맞췄습니다.
+  - D-DAY 날짜 표시는 언어 설정에 따라 한국어 `yy/MM/dd`, 영어 `dd/MM/yy` 형식으로 보여줍니다.
+
+- 완료 투두와 보조 창 UX 개선
+  - 완료한 투두는 별도 창에서 모아보는 흐름으로 정리해, 메인 Library 편집과 분리했습니다.
+  - 사이드 패널 카테고리 영역은 더 안정적으로 스크롤되고, 노출 개수도 과하지 않게 조정했습니다.
+
+- 에이전트 제목/컨텍스트 안정화
+  - Coding Agent 관련 제목이 더 짧고 읽기 좋게 정리됩니다.
+  - 세션/레포 컨텍스트 조합, 오버레이 닫힘 처리, 제목 감지 흐름을 손봐 더 안정적으로 동작하게 했습니다.
+
+### 버전 정보
+
+- `MARKETING_VERSION = 1.4.0`
+- `CURRENT_PROJECT_VERSION = 10`
+- 이번 배포 번들은 `1.4.0 (10)` 기준입니다.
+
+---
+
+## English
+
+### Highlights
+
+- New calendar todo workspace
+  - The Library now includes a mini calendar, and a dedicated `Calendar` window opens into a monthly view for date-based planning.
+  - Clicking a day opens a detail modal where you can create and complete multiple category-free calendar todos.
+  - D-DAY entries can also mirror onto the chosen deadline date with a `[D-DAY]` label.
+
+- Better Google Calendar sync flow
+  - A setup modal now explains how to make NotchNote calendar items visible across phone calendar apps through the same Google account.
+  - Users can choose which connected Google calendar on this Mac should receive synced events.
+  - A manual save action and clearer sync-status labels make it easier to tell when an item is only local versus actually synced to Google Calendar.
+
+- Refined calendar UI details
+  - The sidebar mini calendar has been tightened up with cleaner weekday labels, today context, and per-cell indicators.
+  - The date detail modal can now be dismissed by clicking outside, and the action label has been updated from `Cancel` to `Close`.
+  - D-DAY dates are formatted by locale: Korean uses `yy/MM/dd`, while English uses `dd/MM/yy`.
+
+- Improved completed-todo and auxiliary window UX
+  - Completed todos now live in a dedicated window so they are separated more cleanly from the main Library editing flow.
+  - The sidebar category area scrolls more cleanly and keeps the visible list under control.
+
+- More stable coding-agent titles and context handling
+  - Coding-agent titles are shorter and easier to scan.
+  - Session/repo context handling, overlay dismissal, and title detection were refined for more reliable behavior.
+
+### Version Metadata
+
+- `MARKETING_VERSION = 1.4.0`
+- `CURRENT_PROJECT_VERSION = 10`
+- This release ships as `1.4.0 (10)`.
+]]></description>
+            <enclosure url="https://github.com/Dindb-dong/NotchNote-Releases/releases/download/v1.4.0/NotchNote.zip" length="3470701" type="application/octet-stream" sparkle:edSignature="fOEZzeoiiHvINUAXWamcMzKHKjNmfh8t5pDyAYxITYrtx9kUJUMBC9hm8XCPf10yhFpRZERq4ppTEdxGofe1Bw=="></enclosure>
+        </item>
+    </channel>
+</rss><!-- sparkle-signatures:
+edSignature: 4KD5TJOUaeLUSJLMc3aqMwdS0kW9gJiRwf9l5V+mZtcEifIMHiFmhYISO6RKyvdxnE3i3gbUu3/SE6MHW+4FAg==
+length: 5268
+-->
