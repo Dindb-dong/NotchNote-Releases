@@ -4,47 +4,49 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>NotchNote</title>
         <item>
-            <title>1.4.0</title>
-            <pubDate>Sat, 04 Apr 2026 00:23:59 +0900</pubDate>
-            <link>https://github.com/Dindb-dong/NotchNote-Releases/releases/tag/v1.4.0</link>
-            <sparkle:version>10</sparkle:version>
-            <sparkle:shortVersionString>1.4.0</sparkle:shortVersionString>
+            <title>1.4.1</title>
+            <pubDate>Sat, 04 Apr 2026 02:43:22 +0900</pubDate>
+            <link>https://github.com/Dindb-dong/NotchNote-Releases/releases/tag/v1.4.1</link>
+            <sparkle:version>11</sparkle:version>
+            <sparkle:shortVersionString>1.4.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# NotchNote 1.4.0 Release Notes
+            <description sparkle:format="markdown"><![CDATA[# NotchNote 1.4.1 Release Notes
 
 ## Korean
 
 ### 주요 변경
 
-- 캘린더 전용 투두 워크스페이스 추가
-  - Library 하단에 미니 캘린더가 생겼고, 별도 `Calendar` 창에서 월간 뷰로 일정을 관리할 수 있습니다.
-  - 특정 날짜를 누르면 날짜 상세 모달이 열리고, 카테고리 없는 캘린더 전용 투두를 여러 개 작성하거나 완료할 수 있습니다.
-  - D-DAY를 따로 지정하면 해당 날짜에도 `[D-DAY]` 일정이 함께 반영되도록 정리했습니다.
+- 캘린더 투두 흐름 안정화
+  - 캘린더 상세 모달에 `저장` 버튼을 추가해, 입력을 마친 뒤 저장 상태를 더 분명하게 확인할 수 있습니다.
+  - 저장이 실제로 외부 연동까지 끝난 경우에만 상태 문구가 `Google 캘린더 연동됨`으로 바뀌도록 정리했습니다.
+  - D-DAY 미러 일정이 macOS 캘린더와 Google 캘린더 쪽에도 더 일관되게 반영되도록 동기화 로직을 다듬었습니다.
+  - 하루짜리 일정이 이틀 일정처럼 보이던 all-day 이벤트 처리도 수정했습니다.
 
-- Google 캘린더 연동 흐름 개선
-  - 캘린더 사용 전 안내 모달을 통해, 휴대폰에서도 일정을 보려면 같은 Google 계정을 연결해야 한다는 점을 먼저 설명합니다.
-  - 이 Mac에 연결된 Google 캘린더 중 업로드 대상을 직접 고를 수 있게 바꿨습니다.
-  - 저장 버튼과 연동 상태 문구를 추가해, 앱 내부 저장인지 실제 Google 캘린더 연동이 끝났는지 더 분명하게 보여줍니다.
+- Google 캘린더 연동과 안내 흐름 개선
+  - 캘린더 사용 전 인라인 카드 대신 단계형 모달로 안내를 보여줍니다.
+  - 같은 Google 계정을 휴대폰 캘린더 앱에 연결하면 iPhone, Samsung Calendar, Google Calendar에서도 일정을 확인할 수 있다는 점을 더 자세히 설명합니다.
+  - 이 Mac에 연결된 Google 계정/캘린더 목록을 보여주고, 그중 업로드 대상을 고르게 했습니다.
+  - Google Workspace 계정처럼 `gmail.com`이 아닌 도메인을 쓰는 계정도 더 잘 감지하도록 보완했습니다.
 
-- 캘린더 UI 디테일 다듬기
-  - 사이드 패널 미니 캘린더를 더 촘촘한 구조로 다시 다듬고, 요일 헤더·오늘 날짜·셀 정보 배치를 정리했습니다.
-  - 날짜 상세 모달은 바깥 영역을 눌러 닫을 수 있고, 우측 액션도 `취소` 대신 `닫기`로 맞췄습니다.
-  - D-DAY 날짜 표시는 언어 설정에 따라 한국어 `yy/MM/dd`, 영어 `dd/MM/yy` 형식으로 보여줍니다.
+- 미니 캘린더와 사이드바 레이아웃 다듬기
+  - 사이드 패널의 카테고리 노출은 `전체 노트`를 제외하고 최대 5개로 정리하고, 넘치는 목록은 스크롤과 `외 N개` 표기로 처리합니다.
+  - 미니 캘린더는 더 짧은 요일 헤더, 오늘 날짜 표시, 낮아진 셀 높이, 좌상단 날짜/좌하단 점/우하단 개수 구조로 다시 정리했습니다.
+  - 셀 내부 여백과 사이드 패널 폭도 조정해 날짜 숫자가 깨지거나 줄바꿈되는 문제를 완화했습니다.
 
-- 완료 투두와 보조 창 UX 개선
-  - 완료한 투두는 별도 창에서 모아보는 흐름으로 정리해, 메인 Library 편집과 분리했습니다.
-  - 사이드 패널 카테고리 영역은 더 안정적으로 스크롤되고, 노출 개수도 과하지 않게 조정했습니다.
+- 업데이트와 개발 환경 분리
+  - Sparkle 자동 업데이트 feed를 공개 접근 가능한 릴리즈 저장소로 옮겨, 업데이트 알림 후 즉시 오류가 나던 문제를 복구했습니다.
+  - 배포 스크립트가 appcast를 릴리즈 저장소에도 같이 반영하도록 수정했습니다.
+  - Debug 빌드는 `NotchNote_Dev`와 별도 번들 ID를 사용해, 개발용과 배포용의 접근성/자동화/캘린더 권한이 덜 충돌하게 했습니다.
 
-- 에이전트 제목/컨텍스트 안정화
-  - Coding Agent 관련 제목이 더 짧고 읽기 좋게 정리됩니다.
-  - 세션/레포 컨텍스트 조합, 오버레이 닫힘 처리, 제목 감지 흐름을 손봐 더 안정적으로 동작하게 했습니다.
+- 컨텍스트 감지 개선
+  - `cmux`를 터미널 계열 앱으로 인식하도록 추가해, 세션 제목 기반 컨텍스트를 더 안정적으로 읽습니다.
 
 ### 버전 정보
 
-- `MARKETING_VERSION = 1.4.0`
-- `CURRENT_PROJECT_VERSION = 10`
-- 이번 배포 번들은 `1.4.0 (10)` 기준입니다.
+- `MARKETING_VERSION = 1.4.1`
+- `CURRENT_PROJECT_VERSION = 11`
+- 이번 배포 번들은 `1.4.1 (11)` 기준입니다.
 
 ---
 
@@ -52,39 +54,41 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
 
 ### Highlights
 
-- New calendar todo workspace
-  - The Library now includes a mini calendar, and a dedicated `Calendar` window opens into a monthly view for date-based planning.
-  - Clicking a day opens a detail modal where you can create and complete multiple category-free calendar todos.
-  - D-DAY entries can also mirror onto the chosen deadline date with a `[D-DAY]` label.
+- More reliable calendar todo flow
+  - The calendar detail modal now includes a `Save` button so the end of an edit feels explicit.
+  - Sync status changes to `Synced with Google Calendar` only after external sync actually succeeds.
+  - D-DAY mirrored events now sync more consistently to macOS Calendar and Google Calendar.
+  - All-day event handling was corrected so one-day items no longer appear as spanning two days.
 
-- Better Google Calendar sync flow
-  - A setup modal now explains how to make NotchNote calendar items visible across phone calendar apps through the same Google account.
-  - Users can choose which connected Google calendar on this Mac should receive synced events.
-  - A manual save action and clearer sync-status labels make it easier to tell when an item is only local versus actually synced to Google Calendar.
+- Better Google Calendar onboarding
+  - The pre-sync guidance now appears as a staged modal instead of an inline card.
+  - The setup copy more clearly explains that using the same Google account on phone calendar apps makes NotchNote schedules visible across iPhone, Samsung Calendar, and Google Calendar.
+  - Users can now choose which connected Google calendar on this Mac should receive uploaded events.
+  - Google Workspace accounts using custom domains are detected more reliably.
 
-- Refined calendar UI details
-  - The sidebar mini calendar has been tightened up with cleaner weekday labels, today context, and per-cell indicators.
-  - The date detail modal can now be dismissed by clicking outside, and the action label has been updated from `Cancel` to `Close`.
-  - D-DAY dates are formatted by locale: Korean uses `yy/MM/dd`, while English uses `dd/MM/yy`.
+- Refined mini calendar and sidebar layout
+  - The sidebar now shows at most five categories besides `All Notes`, with scrolling and an overflow indicator for the rest.
+  - The mini calendar was redesigned with shorter weekday labels, a visible today date, shorter cells, and clearer per-cell markers.
+  - Cell spacing and sidebar width were adjusted to reduce broken or wrapped date labels.
 
-- Improved completed-todo and auxiliary window UX
-  - Completed todos now live in a dedicated window so they are separated more cleanly from the main Library editing flow.
-  - The sidebar category area scrolls more cleanly and keeps the visible list under control.
+- Safer updates and cleaner dev separation
+  - Sparkle now reads from a publicly reachable release-repo feed, fixing the immediate update retrieval failure.
+  - The release scripts now publish the signed appcast to the release repository as part of deployment.
+  - Debug builds now use `NotchNote_Dev` and a separate bundle identifier so development and production permissions do not collide as easily.
 
-- More stable coding-agent titles and context handling
-  - Coding-agent titles are shorter and easier to scan.
-  - Session/repo context handling, overlay dismissal, and title detection were refined for more reliable behavior.
+- Better context detection
+  - `cmux` is now recognized as a terminal-family app, improving session-scoped context capture.
 
 ### Version Metadata
 
-- `MARKETING_VERSION = 1.4.0`
-- `CURRENT_PROJECT_VERSION = 10`
-- This release ships as `1.4.0 (10)`.
+- `MARKETING_VERSION = 1.4.1`
+- `CURRENT_PROJECT_VERSION = 11`
+- This release ships as `1.4.1 (11)`.
 ]]></description>
-            <enclosure url="https://github.com/Dindb-dong/NotchNote-Releases/releases/download/v1.4.0/NotchNote.zip" length="3470701" type="application/octet-stream" sparkle:edSignature="fOEZzeoiiHvINUAXWamcMzKHKjNmfh8t5pDyAYxITYrtx9kUJUMBC9hm8XCPf10yhFpRZERq4ppTEdxGofe1Bw=="></enclosure>
+            <enclosure url="https://github.com/Dindb-dong/NotchNote-Releases/releases/download/v1.4.1/NotchNote.zip" length="3471051" type="application/octet-stream" sparkle:edSignature="bRgINaYStBTzp/GgWqbuqvBru5d/0cNNn/t9DEufqv+hF7rLT6Z2dDVsNqde8QZ0OP31yOo/vFydsxqi3oPmBA=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: 4KD5TJOUaeLUSJLMc3aqMwdS0kW9gJiRwf9l5V+mZtcEifIMHiFmhYISO6RKyvdxnE3i3gbUu3/SE6MHW+4FAg==
-length: 5268
+edSignature: djO91wjJ16MVLUdF+5dZpDEejulpVeJG/afk/ij0JfjWtB1C2yyU0tzpqGqWkisd0hikgTRZN54blQh5TN0aCw==
+length: 5872
 -->
