@@ -4,49 +4,46 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>NotchNote</title>
         <item>
-            <title>1.4.1</title>
-            <pubDate>Sat, 04 Apr 2026 02:43:22 +0900</pubDate>
-            <link>https://github.com/Dindb-dong/NotchNote-Releases/releases/tag/v1.4.1</link>
-            <sparkle:version>11</sparkle:version>
-            <sparkle:shortVersionString>1.4.1</sparkle:shortVersionString>
+            <title>1.4.3</title>
+            <pubDate>Wed, 08 Apr 2026 19:57:43 +0900</pubDate>
+            <link>https://github.com/Dindb-dong/NotchNote-Releases/releases/tag/v1.4.3</link>
+            <sparkle:version>13</sparkle:version>
+            <sparkle:shortVersionString>1.4.3</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# NotchNote 1.4.1 Release Notes
+            <description sparkle:format="markdown"><![CDATA[# NotchNote 1.4.3 Release Notes
 
 ## Korean
 
 ### 주요 변경
 
-- 캘린더 투두 흐름 안정화
-  - 캘린더 상세 모달에 `저장` 버튼을 추가해, 입력을 마친 뒤 저장 상태를 더 분명하게 확인할 수 있습니다.
-  - 저장이 실제로 외부 연동까지 끝난 경우에만 상태 문구가 `Google 캘린더 연동됨`으로 바뀌도록 정리했습니다.
-  - D-DAY 미러 일정이 macOS 캘린더와 Google 캘린더 쪽에도 더 일관되게 반영되도록 동기화 로직을 다듬었습니다.
-  - 하루짜리 일정이 이틀 일정처럼 보이던 all-day 이벤트 처리도 수정했습니다.
+- 설정 창을 섹션 기반 사이드바로 전면 개편
+  - 설정 화면을 `일반`, `생산성`, `카테고리`, `사이트`, `프라이빗`, `캘린더`, `정보` 섹션으로 재구성했습니다.
+  - 사이드바 항목 전체를 클릭 가능한 버튼 영역으로 바꿔, 텍스트만 눌리던 문제를 해결했습니다.
+  - 설정 창 폭/높이를 확대해(1120x800) 복잡한 설정에서도 가독성을 높였습니다.
 
-- Google 캘린더 연동과 안내 흐름 개선
-  - 캘린더 사용 전 인라인 카드 대신 단계형 모달로 안내를 보여줍니다.
-  - 같은 Google 계정을 휴대폰 캘린더 앱에 연결하면 iPhone, Samsung Calendar, Google Calendar에서도 일정을 확인할 수 있다는 점을 더 자세히 설명합니다.
-  - 이 Mac에 연결된 Google 계정/캘린더 목록을 보여주고, 그중 업로드 대상을 고르게 했습니다.
-  - Google Workspace 계정처럼 `gmail.com`이 아닌 도메인을 쓰는 계정도 더 잘 감지하도록 보완했습니다.
+- 인라인(하위) 탭 내비게이션 추가
+  - 상위 섹션과 별도로, 사이드바 내부에 하위 탭을 인라인으로 노출하도록 바꿨습니다.
+  - `일반`: 언어, 테마, 오버레이
+  - `생산성`: 단축키, 리마인더, 보관 기간
+  - `카테고리`: 앱 카테고리, 노트 연결
+  - `정보`: 오픈소스 라이선스, 앱 라이선스
+  - 하위 탭 클릭 시 해당 섹션 내부 위치로 즉시 스크롤 이동됩니다.
 
-- 미니 캘린더와 사이드바 레이아웃 다듬기
-  - 사이드 패널의 카테고리 노출은 `전체 노트`를 제외하고 최대 5개로 정리하고, 넘치는 목록은 스크롤과 `외 N개` 표기로 처리합니다.
-  - 미니 캘린더는 더 짧은 요일 헤더, 오늘 날짜 표시, 낮아진 셀 높이, 좌상단 날짜/좌하단 점/우하단 개수 구조로 다시 정리했습니다.
-  - 셀 내부 여백과 사이드 패널 폭도 조정해 날짜 숫자가 깨지거나 줄바꿈되는 문제를 완화했습니다.
+- 정보/라이선스 영역 강화
+  - 기존 `Vibe Island` 그룹명을 `License`로 정리했습니다.
+  - 정보 섹션에 공식 링크(웹사이트/개발자/커뮤니티/버그신고/피드백)와 라이선스 카드 구성을 추가했습니다.
+  - 라이선스 뷰어에 `Sparkle · MIT`와 `NotchNote · Proprietary`를 함께 표시하도록 확장했습니다.
+  - Sparkle 라이선스가 번들에서 로드되지 않는 상황을 대비해 fallback 원문을 내장했습니다.
 
-- 업데이트와 개발 환경 분리
-  - Sparkle 자동 업데이트 feed를 공개 접근 가능한 릴리즈 저장소로 옮겨, 업데이트 알림 후 즉시 오류가 나던 문제를 복구했습니다.
-  - 배포 스크립트가 appcast를 릴리즈 저장소에도 같이 반영하도록 수정했습니다.
-  - Debug 빌드는 `NotchNote_Dev`와 별도 번들 ID를 사용해, 개발용과 배포용의 접근성/자동화/캘린더 권한이 덜 충돌하게 했습니다.
-
-- 컨텍스트 감지 개선
-  - `cmux`를 터미널 계열 앱으로 인식하도록 추가해, 세션 제목 기반 컨텍스트를 더 안정적으로 읽습니다.
+- 긴 탭 목록 렌더링 안정화
+  - 사이드바를 독립 스크롤 영역으로 전환해, 탭이 길어질 때 하단 버튼이 깨지거나 잘리는 문제를 완화했습니다.
 
 ### 버전 정보
 
-- `MARKETING_VERSION = 1.4.1`
-- `CURRENT_PROJECT_VERSION = 11`
-- 이번 배포 번들은 `1.4.1 (11)` 기준입니다.
+- `MARKETING_VERSION = 1.4.3`
+- `CURRENT_PROJECT_VERSION = 13`
+- 이번 배포 번들은 `1.4.3 (13)` 기준입니다.
 
 ---
 
@@ -54,41 +51,38 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
 
 ### Highlights
 
-- More reliable calendar todo flow
-  - The calendar detail modal now includes a `Save` button so the end of an edit feels explicit.
-  - Sync status changes to `Synced with Google Calendar` only after external sync actually succeeds.
-  - D-DAY mirrored events now sync more consistently to macOS Calendar and Google Calendar.
-  - All-day event handling was corrected so one-day items no longer appear as spanning two days.
+- Full section-based redesign for Settings
+  - Settings is now structured into `General`, `Productivity`, `Categories`, `Sites`, `Privacy`, `Calendar`, and `Info`.
+  - Sidebar rows are now fully clickable buttons, fixing the previous text-only hit target behavior.
+  - The Settings window was expanded to 1120x800 for better readability in dense configurations.
 
-- Better Google Calendar onboarding
-  - The pre-sync guidance now appears as a staged modal instead of an inline card.
-  - The setup copy more clearly explains that using the same Google account on phone calendar apps makes NotchNote schedules visible across iPhone, Samsung Calendar, and Google Calendar.
-  - Users can now choose which connected Google calendar on this Mac should receive uploaded events.
-  - Google Workspace accounts using custom domains are detected more reliably.
+- New inline child-tab navigation
+  - Inline child tabs are now shown directly under each parent section in the sidebar.
+  - `General`: Language, Theme, Overlay
+  - `Productivity`: Shortcut, Reminder, Retention
+  - `Categories`: App Categories, Linked Notes
+  - `Info`: Open Source Licenses, App License
+  - Selecting a child tab scrolls directly to the matching content block.
 
-- Refined mini calendar and sidebar layout
-  - The sidebar now shows at most five categories besides `All Notes`, with scrolling and an overflow indicator for the rest.
-  - The mini calendar was redesigned with shorter weekday labels, a visible today date, shorter cells, and clearer per-cell markers.
-  - Cell spacing and sidebar width were adjusted to reduce broken or wrapped date labels.
+- Improved info and license experience
+  - The previous `Vibe Island` sidebar group label was renamed to `License`.
+  - The Info section now includes official links (website/developer/community/bug report/feedback) and dedicated license cards.
+  - The license viewer now includes both `Sparkle · MIT` and `NotchNote · Proprietary` entries.
+  - A built-in fallback license text is provided when Sparkle license files cannot be loaded from bundle resources.
 
-- Safer updates and cleaner dev separation
-  - Sparkle now reads from a publicly reachable release-repo feed, fixing the immediate update retrieval failure.
-  - The release scripts now publish the signed appcast to the release repository as part of deployment.
-  - Debug builds now use `NotchNote_Dev` and a separate bundle identifier so development and production permissions do not collide as easily.
-
-- Better context detection
-  - `cmux` is now recognized as a terminal-family app, improving session-scoped context capture.
+- Stable rendering with long tab lists
+  - The sidebar now uses its own scrollable region so long navigation sets no longer clip or break at the bottom.
 
 ### Version Metadata
 
-- `MARKETING_VERSION = 1.4.1`
-- `CURRENT_PROJECT_VERSION = 11`
-- This release ships as `1.4.1 (11)`.
+- `MARKETING_VERSION = 1.4.3`
+- `CURRENT_PROJECT_VERSION = 13`
+- This release ships as `1.4.3 (13)`.
 ]]></description>
-            <enclosure url="https://github.com/Dindb-dong/NotchNote-Releases/releases/download/v1.4.1/NotchNote.zip" length="3471051" type="application/octet-stream" sparkle:edSignature="bRgINaYStBTzp/GgWqbuqvBru5d/0cNNn/t9DEufqv+hF7rLT6Z2dDVsNqde8QZ0OP31yOo/vFydsxqi3oPmBA=="></enclosure>
+            <enclosure url="https://github.com/Dindb-dong/NotchNote-Releases/releases/download/v1.4.3/NotchNote.zip" length="3734294" type="application/octet-stream" sparkle:edSignature="xesdWaTgLpT6EwIVXyr6n26ASXe0HKh2u2e3K3Wgvkgt2FYutIvpV+ZCEr5w6jwbFoGqRFJ+IVI6MzapurjWDQ=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: djO91wjJ16MVLUdF+5dZpDEejulpVeJG/afk/ij0JfjWtB1C2yyU0tzpqGqWkisd0hikgTRZN54blQh5TN0aCw==
-length: 5872
+edSignature: LHIrFC4isy0O94cqeydz2kuBPpbCM1hzxnz+lKSwydk81lNwW4DsxCZ9kPEQUrFpXMHhktnl9PCA6sFf8tYKAA==
+length: 4611
 -->
