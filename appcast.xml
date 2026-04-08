@@ -5,7 +5,7 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
         <title>NotchNote</title>
         <item>
             <title>1.4.3</title>
-            <pubDate>Wed, 08 Apr 2026 19:57:43 +0900</pubDate>
+            <pubDate>Wed, 08 Apr 2026 20:15:11 +0900</pubDate>
             <link>https://github.com/Dindb-dong/NotchNote-Releases/releases/tag/v1.4.3</link>
             <sparkle:version>13</sparkle:version>
             <sparkle:shortVersionString>1.4.3</sparkle:shortVersionString>
@@ -38,6 +38,9 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
 
 - 긴 탭 목록 렌더링 안정화
   - 사이드바를 독립 스크롤 영역으로 전환해, 탭이 길어질 때 하단 버튼이 깨지거나 잘리는 문제를 완화했습니다.
+
+- 캘린더 권한 요청 버튼 동작 수정
+  - 권한 상태에 따라 요청 또는 시스템 설정 열기로 정확히 동작하도록 보완했습니다.
 
 ### 버전 정보
 
@@ -73,16 +76,19 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
 - Stable rendering with long tab lists
   - The sidebar now uses its own scrollable region so long navigation sets no longer clip or break at the bottom.
 
+- Calendar permission action fix
+  - The permission button now correctly requests access or opens System Settings based on the current authorization state.
+
 ### Version Metadata
 
 - `MARKETING_VERSION = 1.4.3`
 - `CURRENT_PROJECT_VERSION = 13`
 - This release ships as `1.4.3 (13)`.
 ]]></description>
-            <enclosure url="https://github.com/Dindb-dong/NotchNote-Releases/releases/download/v1.4.3/NotchNote.zip" length="3734294" type="application/octet-stream" sparkle:edSignature="xesdWaTgLpT6EwIVXyr6n26ASXe0HKh2u2e3K3Wgvkgt2FYutIvpV+ZCEr5w6jwbFoGqRFJ+IVI6MzapurjWDQ=="></enclosure>
+            <enclosure url="https://github.com/Dindb-dong/NotchNote-Releases/releases/download/v1.4.3/NotchNote.zip" length="3735580" type="application/octet-stream" sparkle:edSignature="0b2Q9he4ciEqqle4WDMfxHe2EHTxWzpduLDBeJxAZavcFE3Gh6We0hm76bWduaZgjVYq4Lud98ap195bGTDEAg=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: LHIrFC4isy0O94cqeydz2kuBPpbCM1hzxnz+lKSwydk81lNwW4DsxCZ9kPEQUrFpXMHhktnl9PCA6sFf8tYKAA==
-length: 4611
+edSignature: eReE8o7vLux2LiFycD7EymaSrxvQWrCTXeMBMJgZ4+h+/4l6aYDPDcdJfIWTp1l84ZBWT96FVIzXQcG5dtYqCg==
+length: 4931
 -->
