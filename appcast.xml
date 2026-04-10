@@ -4,91 +4,69 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>NotchNote</title>
         <item>
-            <title>1.4.3</title>
-            <pubDate>Wed, 08 Apr 2026 20:15:11 +0900</pubDate>
-            <link>https://github.com/Dindb-dong/NotchNote-Releases/releases/tag/v1.4.3</link>
-            <sparkle:version>13</sparkle:version>
-            <sparkle:shortVersionString>1.4.3</sparkle:shortVersionString>
+            <title>1.4.4</title>
+            <pubDate>Sat, 11 Apr 2026 02:03:54 +0900</pubDate>
+            <link>https://github.com/Dindb-dong/NotchNote-Releases/releases/tag/v1.4.4</link>
+            <sparkle:version>14</sparkle:version>
+            <sparkle:shortVersionString>1.4.4</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# NotchNote 1.4.3 Release Notes
+            <description sparkle:format="markdown"><![CDATA[# NotchNote 1.4.4 Release Notes
 
 ## Korean
 
-### 주요 변경
+### Hotfix
 
-- 설정 창을 섹션 기반 사이드바로 전면 개편
-  - 설정 화면을 `일반`, `생산성`, `카테고리`, `사이트`, `프라이빗`, `캘린더`, `정보` 섹션으로 재구성했습니다.
-  - 사이드바 항목 전체를 클릭 가능한 버튼 영역으로 바꿔, 텍스트만 눌리던 문제를 해결했습니다.
-  - 설정 창 폭/높이를 확대해(1120x800) 복잡한 설정에서도 가독성을 높였습니다.
+- Chromium 계열 브라우저 인식 범위를 확장했습니다.
+  - `Whale`을 포함해 일부 Chrome 계열 앱에서 컨텍스트를 놓치던 케이스를 보완했습니다.
+  - 브라우저 탭 정보 조회 시 앱 이름 대신 `bundle id` 기반 접근으로 안정성을 높였습니다.
 
-- 인라인(하위) 탭 내비게이션 추가
-  - 상위 섹션과 별도로, 사이드바 내부에 하위 탭을 인라인으로 노출하도록 바꿨습니다.
-  - `일반`: 언어, 테마, 오버레이
-  - `생산성`: 단축키, 리마인더, 보관 기간
-  - `카테고리`: 앱 카테고리, 노트 연결
-  - `정보`: 오픈소스 라이선스, 앱 라이선스
-  - 하위 탭 클릭 시 해당 섹션 내부 위치로 즉시 스크롤 이동됩니다.
+- macOS 15.5에서 기본 시스템 버튼 스타일이 섞여 보이던 문제를 수정했습니다.
+  - 온보딩/설정/백업/캘린더/라이브러리 화면의 잔여 기본 버튼을 커스텀 액션 버튼으로 통일했습니다.
 
-- 정보/라이선스 영역 강화
-  - 기존 `Vibe Island` 그룹명을 `License`로 정리했습니다.
-  - 정보 섹션에 공식 링크(웹사이트/개발자/커뮤니티/버그신고/피드백)와 라이선스 카드 구성을 추가했습니다.
-  - 라이선스 뷰어에 `Sparkle · MIT`와 `NotchNote · Proprietary`를 함께 표시하도록 확장했습니다.
-  - Sparkle 라이선스가 번들에서 로드되지 않는 상황을 대비해 fallback 원문을 내장했습니다.
+- macOS 15.5 캘린더 권한 요청 흐름을 보강했습니다.
+  - 권한 요청 전에 앱 활성화를 보장해 권한 팝업 누락 가능성을 줄였습니다.
+  - 최신 권한 API 요청 후 상태가 불안정한 경우 레거시 요청 경로로 폴백하도록 처리했습니다.
 
-- 긴 탭 목록 렌더링 안정화
-  - 사이드바를 독립 스크롤 영역으로 전환해, 탭이 길어질 때 하단 버튼이 깨지거나 잘리는 문제를 완화했습니다.
-
-- 캘린더 권한 요청 버튼 동작 수정
-  - 권한 상태에 따라 요청 또는 시스템 설정 열기로 정확히 동작하도록 보완했습니다.
+- 설정 언어 전환 시 일부 환경에서 나타나던 SwiftUI 퍼블리시 경고를 제거했습니다.
+  - 뷰 업데이트 중 상태 퍼블리시 충돌이 나지 않도록 언어 상태 반영 타이밍을 안전하게 조정했습니다.
 
 ### 버전 정보
 
-- `MARKETING_VERSION = 1.4.3`
-- `CURRENT_PROJECT_VERSION = 13`
-- 이번 배포 번들은 `1.4.3 (13)` 기준입니다.
+- `MARKETING_VERSION = 1.4.4`
+- `CURRENT_PROJECT_VERSION = 14`
+- 이번 배포 번들은 `1.4.4 (14)` 기준입니다.
 
 ---
 
 ## English
 
-### Highlights
+### Hotfix
 
-- Full section-based redesign for Settings
-  - Settings is now structured into `General`, `Productivity`, `Categories`, `Sites`, `Privacy`, `Calendar`, and `Info`.
-  - Sidebar rows are now fully clickable buttons, fixing the previous text-only hit target behavior.
-  - The Settings window was expanded to 1120x800 for better readability in dense configurations.
+- Expanded Chromium-family browser detection.
+  - Fixed missing context capture for some Chrome-based apps, including `Whale`.
+  - Switched browser-tab inspection to `bundle id` targeting for more reliable AppleScript routing.
 
-- New inline child-tab navigation
-  - Inline child tabs are now shown directly under each parent section in the sidebar.
-  - `General`: Language, Theme, Overlay
-  - `Productivity`: Shortcut, Reminder, Retention
-  - `Categories`: App Categories, Linked Notes
-  - `Info`: Open Source Licenses, App License
-  - Selecting a child tab scrolls directly to the matching content block.
+- Fixed mixed system-default button styles on macOS 15.5.
+  - Replaced remaining native default buttons with custom action buttons across Onboarding, Settings, Backup, Calendar, and Library views.
 
-- Improved info and license experience
-  - The previous `Vibe Island` sidebar group label was renamed to `License`.
-  - The Info section now includes official links (website/developer/community/bug report/feedback) and dedicated license cards.
-  - The license viewer now includes both `Sparkle · MIT` and `NotchNote · Proprietary` entries.
-  - A built-in fallback license text is provided when Sparkle license files cannot be loaded from bundle resources.
+- Hardened calendar permission flow on macOS 15.5.
+  - Ensured the app activates before requesting permission to reduce prompt-miss cases.
+  - Added a legacy fallback request path when the post-request status remains unstable.
 
-- Stable rendering with long tab lists
-  - The sidebar now uses its own scrollable region so long navigation sets no longer clip or break at the bottom.
-
-- Calendar permission action fix
-  - The permission button now correctly requests access or opens System Settings based on the current authorization state.
+- Removed a SwiftUI publish warning seen during language changes in Settings.
+  - Adjusted language-state update timing to avoid state publication during an active view update cycle.
 
 ### Version Metadata
 
-- `MARKETING_VERSION = 1.4.3`
-- `CURRENT_PROJECT_VERSION = 13`
-- This release ships as `1.4.3 (13)`.
+- `MARKETING_VERSION = 1.4.4`
+- `CURRENT_PROJECT_VERSION = 14`
+- This release ships as `1.4.4 (14)`.
 ]]></description>
-            <enclosure url="https://github.com/Dindb-dong/NotchNote-Releases/releases/download/v1.4.3/NotchNote.zip" length="3735580" type="application/octet-stream" sparkle:edSignature="0b2Q9he4ciEqqle4WDMfxHe2EHTxWzpduLDBeJxAZavcFE3Gh6We0hm76bWduaZgjVYq4Lud98ap195bGTDEAg=="></enclosure>
+            <enclosure url="https://github.com/Dindb-dong/NotchNote-Releases/releases/download/v1.4.4/NotchNote.zip" length="3749484" type="application/octet-stream" sparkle:edSignature="7PlNN35LlPOOEVY98mDK9yocYvq7OJfKonk+Ydc2mwqmDo8doIE0BSGmxt/LmwZ1bSSeRrrHQv+PKpoVr4LyAQ=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: eReE8o7vLux2LiFycD7EymaSrxvQWrCTXeMBMJgZ4+h+/4l6aYDPDcdJfIWTp1l84ZBWT96FVIzXQcG5dtYqCg==
-length: 4931
+edSignature: d122PAqm2tDFQ+7Zwi6iS9MAey3hrH/UbU7BURBeUgnnfQCq+GVhe/HyBBbn6i2wHj5uO7RKbgZ1kPSS5NtuDw==
+length: 3579
 -->
