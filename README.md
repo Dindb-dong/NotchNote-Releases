@@ -83,7 +83,6 @@ NotchNote는 **지금 작업 중인 맥락(앱/브라우저/프로젝트/세션)
 #### 8) 완료 히스토리 / 레벨 시스템
 
 완료된 투두가 히스토리로 쌓이고 XP/레벨이 반영되는 생산성 보상 흐름을 보여주는 화면입니다.
-![Todo History](assets/todo-history.png)
 ![Level system](assets/screenshot-level-system.png)
 
 ### 첫 실행 안내
@@ -181,7 +180,6 @@ Shows how multiple contexts can share one memo body and stay synchronized.
 
 Shows productivity progression where completed todos feed global history and contribute to XP/level growth.
 
-![Todo History](assets/todo-history.png)
 ![Level system](assets/screenshot-level-system.png)
 
 ### First Launch Note
