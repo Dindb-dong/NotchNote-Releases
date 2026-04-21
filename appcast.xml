@@ -5,9 +5,9 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
         <title>NotchNote</title>
         <item>
             <title>1.4.6</title>
-            <pubDate>Sat, 11 Apr 2026 13:10:04 +0900</pubDate>
+            <pubDate>Wed, 22 Apr 2026 01:40:29 +0900</pubDate>
             <link>https://github.com/Dindb-dong/NotchNote-Releases/releases/tag/v1.4.6</link>
-            <sparkle:version>16</sparkle:version>
+            <sparkle:version>17</sparkle:version>
             <sparkle:shortVersionString>1.4.6</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
@@ -16,6 +16,10 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
 ## Korean
 
 ### 주요 업데이트
+
+- 1.4.6 핫픽스(build 17)를 반영했습니다.
+  - 온보딩 첫 화면에서 `Capture from the notch` / `Open memos with a shortcut` 상단 영역을 제거하고, 4개 기능 카드만 표시하도록 단순화했습니다.
+  - 오래된 메모 자동 삭제(카테고리 보관 기간 기반 pruning) 로직을 제거해 사용자가 저장한 메모가 백그라운드에서 자동 삭제되지 않도록 변경했습니다.
 
 - 캘린더 워크스페이스 편집/동기화 흐름을 리팩토링했습니다.
   - Google 캘린더 이벤트를 월간 화면에서 로컬 Todo 행으로 미러링해, 캘린더 목록 안에서 바로 수정할 수 있도록 개선했습니다.
@@ -37,14 +41,18 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
 ### 버전 정보
 
 - `MARKETING_VERSION = 1.4.6`
-- `CURRENT_PROJECT_VERSION = 16`
-- 이번 배포 번들은 `1.4.6 (16)` 기준입니다.
+- `CURRENT_PROJECT_VERSION = 17`
+- 이번 배포 번들은 `1.4.6 (17)` 기준입니다.
 
 ---
 
 ## English
 
 ### Highlights
+
+- Includes the 1.4.6 hotfix (build 17).
+  - Simplified the first onboarding screen by removing the `Capture from the notch` / `Open memos with a shortcut` top sections and keeping only the four feature cards.
+  - Removed automatic old-memo deletion (category retention pruning), so saved memos are no longer deleted in the background by retention timers.
 
 - Refactored calendar editing and sync behavior.
   - Google Calendar events are now mirrored into local todo rows in the monthly workspace so they can be edited in-place.
@@ -66,13 +74,13 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
 ### Version Metadata
 
 - `MARKETING_VERSION = 1.4.6`
-- `CURRENT_PROJECT_VERSION = 16`
-- This release ships as `1.4.6 (16)`.
+- `CURRENT_PROJECT_VERSION = 17`
+- This release ships as `1.4.6 (17)`.
 ]]></description>
-            <enclosure url="https://github.com/Dindb-dong/NotchNote-Releases/releases/download/v1.4.6/NotchNote.zip" length="3918561" type="application/octet-stream" sparkle:edSignature="E4YVpRh8DblRWneJgzYnBWajhWc4WA2oVM4ngAQwaveum5v/XCgujbsYWEIG1Mcmv5XqHAWgOD+Ohk60ZxupCg=="></enclosure>
+            <enclosure url="https://github.com/Dindb-dong/NotchNote-Releases/releases/download/v1.4.6/NotchNote.zip" length="3877841" type="application/octet-stream" sparkle:edSignature="Cp/lB88+22P9KIlH/b1yxqvdlrSskVm4po0TH0nl4Fz11tnoidnMmE/munnKPDA4oW1vCCT4P1IkHtipP2kaAQ=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: PYlYPCmVpdqLCuLOtIOeKw3ionAO2+an0rjqHv0gKt0y39M0DUBR1bdW3QQl3aowxCt64nF3/IGDE7HfL6rCAA==
-length: 4620
+edSignature: Kf3CLHGPEx3zoXeklD+9swHHoBnd/g+ykq/DnACWuTgCaa3q8SLO2uG+SM1DUTA/14sBqMuVgGiISLDvbq9gCA==
+length: 5410
 -->
