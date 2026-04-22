@@ -1,5 +1,5 @@
 # NotchNote
-
+## Recommended macOS version: 26+
 [한국어](#korean) | [English](#english)
 
 ![NotchNote app icon](assets/app-logo.png)
