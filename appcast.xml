@@ -4,45 +4,34 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>NotchNote</title>
         <item>
-            <title>1.4.6</title>
-            <pubDate>Wed, 22 Apr 2026 01:40:29 +0900</pubDate>
-            <link>https://github.com/Dindb-dong/NotchNote-Releases/releases/tag/v1.4.6</link>
-            <sparkle:version>17</sparkle:version>
-            <sparkle:shortVersionString>1.4.6</sparkle:shortVersionString>
+            <title>1.4.7</title>
+            <pubDate>Tue, 28 Apr 2026 10:21:45 +0900</pubDate>
+            <link>https://github.com/Dindb-dong/NotchNote-Releases/releases/tag/v1.4.7</link>
+            <sparkle:version>18</sparkle:version>
+            <sparkle:shortVersionString>1.4.7</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# NotchNote 1.4.6 Release Notes
+            <description sparkle:format="markdown"><![CDATA[# NotchNote 1.4.7 Release Notes
 
 ## Korean
 
 ### 주요 업데이트
 
-- 1.4.6 핫픽스(build 17)를 반영했습니다.
-  - 온보딩 첫 화면에서 `Capture from the notch` / `Open memos with a shortcut` 상단 영역을 제거하고, 4개 기능 카드만 표시하도록 단순화했습니다.
-  - 오래된 메모 자동 삭제(카테고리 보관 기간 기반 pruning) 로직을 제거해 사용자가 저장한 메모가 백그라운드에서 자동 삭제되지 않도록 변경했습니다.
+- Notion/Figma 데스크톱 앱의 컨텍스트 인식을 개선했습니다.
+  - Notion은 현재 활성 페이지 제목을 기준으로 메모 컨텍스트를 분리합니다.
+  - Figma는 현재 활성 파일/프로젝트 제목을 기준으로 메모 컨텍스트를 분리합니다.
+  - 이제 Notion/Figma에서도 VS Code-family workspace처럼 작업 중인 대상이 바뀌면 별도 메모로 이어집니다.
 
-- 캘린더 워크스페이스 편집/동기화 흐름을 리팩토링했습니다.
-  - Google 캘린더 이벤트를 월간 화면에서 로컬 Todo 행으로 미러링해, 캘린더 목록 안에서 바로 수정할 수 있도록 개선했습니다.
-  - Todo 시간 필드를 추가해 시작/종료 시각을 직접 편집할 수 있고, 변경 내용은 Google 캘린더 이벤트와 동기화됩니다.
-  - D-DAY/시간 토글 동작을 정리해, 날짜 기반 Todo와 시간 기반 Todo를 더 안정적으로 전환할 수 있습니다.
-  - 외부 이벤트 연결 식별자 재정렬(reconcile) 로직을 강화해 중복 생성과 링크 불일치 가능성을 줄였습니다.
-
-- Library 왼쪽 워크스페이스를 카테고리 글로벌 퀵 메모 중심으로 개선했습니다.
-  - 카테고리별 공용 글로벌 퀵 메모를 바로 편집할 수 있습니다.
-  - `All Notes`에서는 카테고리 글로벌 퀵 메모를 2열 그리드로 모아 보고, 카드 클릭으로 해당 카테고리로 이동할 수 있습니다.
-  - 그리드 정렬은 최근 수정 순을 우선하도록 조정했습니다.
-
-- 전역 단축키 경험을 정리했습니다.
-  - Settings에서 오버레이 열기 / 카테고리 글로벌 퀵 메모 열기 / pinned 토글 단축키를 각각 변경할 수 있습니다.
-  - 단축키 충돌 시 전용 단축키를 자동 비활성화해 입력 충돌을 줄였습니다.
-  - 카테고리 글로벌 퀵 메모 단축키가 Library 창 대신 올바른 오버레이 메모 컨텍스트를 열도록 수정했습니다.
-  - pinned 상태에서는 기존 pinned 메모창만 유지한 채 포커스되도록 동작을 맞췄습니다.
+- 창 제목 기반 세션 추적을 안정화했습니다.
+  - Notion/Figma를 title-scoped 앱으로 분류해 active window title을 context hash에 반영합니다.
+  - foreground polling에서 Notion/Figma 제목 변경을 감지해, 앱을 전환하지 않아도 컨텍스트가 갱신됩니다.
+  - 앱 이름 suffix(`Notion`, `Figma`, `Figma Design`)는 표시 제목에서 정리해 실제 페이지/파일 이름을 더 깔끔하게 보여줍니다.
 
 ### 버전 정보
 
-- `MARKETING_VERSION = 1.4.6`
-- `CURRENT_PROJECT_VERSION = 17`
-- 이번 배포 번들은 `1.4.6 (17)` 기준입니다.
+- `MARKETING_VERSION = 1.4.7`
+- `CURRENT_PROJECT_VERSION = 18`
+- 이번 배포 번들은 `1.4.7 (18)` 기준입니다.
 
 ---
 
@@ -50,37 +39,26 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
 
 ### Highlights
 
-- Includes the 1.4.6 hotfix (build 17).
-  - Simplified the first onboarding screen by removing the `Capture from the notch` / `Open memos with a shortcut` top sections and keeping only the four feature cards.
-  - Removed automatic old-memo deletion (category retention pruning), so saved memos are no longer deleted in the background by retention timers.
+- Improved context detection for the Notion and Figma desktop apps.
+  - Notion now separates memo contexts by the active page title.
+  - Figma now separates memo contexts by the active file/project title.
+  - Notion and Figma now behave more like VS Code-family workspaces: switching the active working target opens the matching memo context.
 
-- Refactored calendar editing and sync behavior.
-  - Google Calendar events are now mirrored into local todo rows in the monthly workspace so they can be edited in-place.
-  - Added timed todo fields (start/end minutes) so schedule edits can be synced back to Google Calendar events.
-  - Refined D-DAY/time toggles for safer switching between date-only and timed todos.
-  - Hardened event-link reconciliation to reduce duplicate event creation and link mismatches.
-
-- Reworked the Library left workspace around category global quick memos.
-  - You can edit a shared global quick memo per category directly.
-  - In `All Notes`, category global quick memos are shown in a 2-column overview grid, and each card jumps to that category.
-  - Grid sorting now prioritizes most recently updated quick memos.
-
-- Cleaned up global hotkey behavior.
-  - Settings now lets you configure separate shortcuts for overlay open, category quick memo open, and pinned toggle.
-  - Dedicated hotkeys are automatically disabled when they collide with higher-priority bindings.
-  - Fixed category quick memo hotkey routing so it opens the correct overlay memo context instead of the Library window.
-  - In pinned mode, quick memo hotkey keeps/focuses the existing pinned memo window surface.
+- Stabilized title-based session tracking.
+  - Notion and Figma are treated as title-scoped apps, so the active window title participates in the context hash.
+  - Foreground polling now detects Notion/Figma title changes even when the foreground app itself does not change.
+  - App-name suffixes (`Notion`, `Figma`, `Figma Design`) are cleaned from display titles so the actual page/file name is easier to read.
 
 ### Version Metadata
 
-- `MARKETING_VERSION = 1.4.6`
-- `CURRENT_PROJECT_VERSION = 17`
-- This release ships as `1.4.6 (17)`.
+- `MARKETING_VERSION = 1.4.7`
+- `CURRENT_PROJECT_VERSION = 18`
+- This release ships as `1.4.7 (18)`.
 ]]></description>
-            <enclosure url="https://github.com/Dindb-dong/NotchNote-Releases/releases/download/v1.4.6/NotchNote.zip" length="3877841" type="application/octet-stream" sparkle:edSignature="Cp/lB88+22P9KIlH/b1yxqvdlrSskVm4po0TH0nl4Fz11tnoidnMmE/munnKPDA4oW1vCCT4P1IkHtipP2kaAQ=="></enclosure>
+            <enclosure url="https://github.com/Dindb-dong/NotchNote-Releases/releases/download/v1.4.7/NotchNote.zip" length="3883995" type="application/octet-stream" sparkle:edSignature="8dcpfN/1pCAluW6ch0CIWhQYUnE3Aiu3b1CERgpda9g0Y1E6kC3XFdzWE1nGl0FzXsRGzVfcfdz7CcMlND7GBg=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: Kf3CLHGPEx3zoXeklD+9swHHoBnd/g+ykq/DnACWuTgCaa3q8SLO2uG+SM1DUTA/14sBqMuVgGiISLDvbq9gCA==
-length: 5410
+edSignature: fPaSi4frPm7pzFilYwpzNpVciZgLmjGtJ9CZrcN9Yx+ywi3oU/s4+49TMVS/scn+DWsolr2GxRveZILNPxouAg==
+length: 3305
 -->
