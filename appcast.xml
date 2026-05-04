@@ -4,34 +4,36 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>NotchNote</title>
         <item>
-            <title>1.4.7</title>
-            <pubDate>Tue, 28 Apr 2026 10:21:45 +0900</pubDate>
-            <link>https://github.com/Dindb-dong/NotchNote-Releases/releases/tag/v1.4.7</link>
-            <sparkle:version>18</sparkle:version>
-            <sparkle:shortVersionString>1.4.7</sparkle:shortVersionString>
+            <title>1.4.8</title>
+            <pubDate>Mon, 04 May 2026 19:46:56 +0900</pubDate>
+            <link>https://github.com/Dindb-dong/NotchNote-Releases/releases/tag/v1.4.8</link>
+            <sparkle:version>19</sparkle:version>
+            <sparkle:shortVersionString>1.4.8</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# NotchNote 1.4.7 Release Notes
+            <description sparkle:format="markdown"><![CDATA[# NotchNote 1.4.8 Release Notes
 
 ## Korean
 
 ### 주요 업데이트
 
-- Notion/Figma 데스크톱 앱의 컨텍스트 인식을 개선했습니다.
-  - Notion은 현재 활성 페이지 제목을 기준으로 메모 컨텍스트를 분리합니다.
-  - Figma는 현재 활성 파일/프로젝트 제목을 기준으로 메모 컨텍스트를 분리합니다.
-  - 이제 Notion/Figma에서도 VS Code-family workspace처럼 작업 중인 대상이 바뀌면 별도 메모로 이어집니다.
+- Finder 같은 파일 브라우저 앱의 컨텍스트 인식을 추가했습니다.
+  - 현재 보고 있는 폴더 제목/경로를 메모 컨텍스트에 반영해 폴더 이동별로 더 정확한 메모 세션을 엽니다.
+  - foreground polling에서도 폴더 이동을 감지해 같은 앱 안에서 위치가 바뀌어도 컨텍스트가 갱신됩니다.
 
-- 창 제목 기반 세션 추적을 안정화했습니다.
-  - Notion/Figma를 title-scoped 앱으로 분류해 active window title을 context hash에 반영합니다.
-  - foreground polling에서 Notion/Figma 제목 변경을 감지해, 앱을 전환하지 않아도 컨텍스트가 갱신됩니다.
-  - 앱 이름 suffix(`Notion`, `Figma`, `Figma Design`)는 표시 제목에서 정리해 실제 페이지/파일 이름을 더 깔끔하게 보여줍니다.
+- Library 컨텍스트 메모 고정 기능을 추가했습니다.
+  - 오른쪽 메모 카드의 `Open Context` 왼쪽에 `Pin` / `Unpin` 액션을 추가했습니다.
+  - 고정한 메모는 Library 카드 목록 상단에 쌓이며, 여러 개를 고정하면 나중에 고정한 메모가 더 위에 표시됩니다.
+  - 고정 상태는 설정에 저장되어 앱을 다시 열어도 유지됩니다.
+
+- Calendar 테스트 안정성을 보강했습니다.
+  - 고정 날짜 대신 현재 테스트 월 기준 날짜를 사용해 시간이 지나도 테스트가 깨지지 않도록 정리했습니다.
 
 ### 버전 정보
 
-- `MARKETING_VERSION = 1.4.7`
-- `CURRENT_PROJECT_VERSION = 18`
-- 이번 배포 번들은 `1.4.7 (18)` 기준입니다.
+- `MARKETING_VERSION = 1.4.8`
+- `CURRENT_PROJECT_VERSION = 19`
+- 이번 배포 번들은 `1.4.8 (19)` 기준입니다.
 
 ---
 
@@ -39,26 +41,28 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
 
 ### Highlights
 
-- Improved context detection for the Notion and Figma desktop apps.
-  - Notion now separates memo contexts by the active page title.
-  - Figma now separates memo contexts by the active file/project title.
-  - Notion and Figma now behave more like VS Code-family workspaces: switching the active working target opens the matching memo context.
+- Added context detection for file browser apps such as Finder.
+  - The current folder title/path now participates in the memo context so folder navigation opens the matching memo session.
+  - Foreground polling also detects folder changes inside the same app.
 
-- Stabilized title-based session tracking.
-  - Notion and Figma are treated as title-scoped apps, so the active window title participates in the context hash.
-  - Foreground polling now detects Notion/Figma title changes even when the foreground app itself does not change.
-  - App-name suffixes (`Notion`, `Figma`, `Figma Design`) are cleaned from display titles so the actual page/file name is easier to read.
+- Added pinned Library context memos.
+  - The right-side memo cards now show `Pin` / `Unpin` next to `Open Context`.
+  - Pinned memos stack at the top of the Library card list, with the most recently pinned memo first.
+  - Pin state is persisted in settings and survives app relaunches.
+
+- Hardened Calendar tests.
+  - Calendar tests now use dates from the currently visible test month instead of stale fixed dates.
 
 ### Version Metadata
 
-- `MARKETING_VERSION = 1.4.7`
-- `CURRENT_PROJECT_VERSION = 18`
-- This release ships as `1.4.7 (18)`.
+- `MARKETING_VERSION = 1.4.8`
+- `CURRENT_PROJECT_VERSION = 19`
+- This release ships as `1.4.8 (19)`.
 ]]></description>
-            <enclosure url="https://github.com/Dindb-dong/NotchNote-Releases/releases/download/v1.4.7/NotchNote.zip" length="3883995" type="application/octet-stream" sparkle:edSignature="8dcpfN/1pCAluW6ch0CIWhQYUnE3Aiu3b1CERgpda9g0Y1E6kC3XFdzWE1nGl0FzXsRGzVfcfdz7CcMlND7GBg=="></enclosure>
+            <enclosure url="https://github.com/Dindb-dong/NotchNote-Releases/releases/download/v1.4.8/NotchNote.zip" length="3911313" type="application/octet-stream" sparkle:edSignature="22NGIKhkET+mWHPottsDFh9L+/aHw1xR2aWp4qiabnEr6oI3byWOI+SZ9kOPwHhH/4ZP2IBDUUva/jcOBb6aBA=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: fPaSi4frPm7pzFilYwpzNpVciZgLmjGtJ9CZrcN9Yx+ywi3oU/s4+49TMVS/scn+DWsolr2GxRveZILNPxouAg==
-length: 3305
+edSignature: vimuzi2BUJH0mQ5e6nuzv4WzWAaZvIEwiC1X9oeBsm9Sem+9FVi3dqM0W8kJYrzFIlC0b8pI++0EbThGzpI2Aw==
+length: 3319
 -->
