@@ -4,65 +4,51 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>NotchNote</title>
         <item>
-            <title>1.4.8</title>
-            <pubDate>Mon, 04 May 2026 19:46:56 +0900</pubDate>
-            <link>https://github.com/Dindb-dong/NotchNote-Releases/releases/tag/v1.4.8</link>
-            <sparkle:version>19</sparkle:version>
-            <sparkle:shortVersionString>1.4.8</sparkle:shortVersionString>
+            <title>1.4.9</title>
+            <pubDate>Tue, 02 Jun 2026 13:17:18 +0900</pubDate>
+            <link>https://github.com/Dindb-dong/NotchNote-Releases/releases/tag/v1.4.9</link>
+            <sparkle:version>20</sparkle:version>
+            <sparkle:shortVersionString>1.4.9</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# NotchNote 1.4.8 Release Notes
+            <description sparkle:format="markdown"><![CDATA[# NotchNote 1.4.9 Release Notes
 
 ## Korean
 
-### 주요 업데이트
+### 버그 수정
 
-- Finder 같은 파일 브라우저 앱의 컨텍스트 인식을 추가했습니다.
-  - 현재 보고 있는 폴더 제목/경로를 메모 컨텍스트에 반영해 폴더 이동별로 더 정확한 메모 세션을 엽니다.
-  - foreground polling에서도 폴더 이동을 감지해 같은 앱 안에서 위치가 바뀌어도 컨텍스트가 갱신됩니다.
-
-- Library 컨텍스트 메모 고정 기능을 추가했습니다.
-  - 오른쪽 메모 카드의 `Open Context` 왼쪽에 `Pin` / `Unpin` 액션을 추가했습니다.
-  - 고정한 메모는 Library 카드 목록 상단에 쌓이며, 여러 개를 고정하면 나중에 고정한 메모가 더 위에 표시됩니다.
-  - 고정 상태는 설정에 저장되어 앱을 다시 열어도 유지됩니다.
-
-- Calendar 테스트 안정성을 보강했습니다.
-  - 고정 날짜 대신 현재 테스트 월 기준 날짜를 사용해 시간이 지나도 테스트가 깨지지 않도록 정리했습니다.
+- Codex, Cmux, Comet/Chrome 계열 앱에서 컨텍스트 감지가 잘못 잡히던 문제를 수정했습니다.
+- Codex 앱 안에서 다른 프로젝트나 다른 채팅으로 이동해도 이전 세션 제목이 계속 유지되던 문제를 수정했습니다.
+- 메모 단축키를 반복해서 눌렀을 때 Library 창이 불필요하게 열리는 문제를 수정했습니다.
+- Accessibility 권한 재등록 버튼이 권한 프롬프트를 제대로 띄우도록 수정했습니다.
 
 ### 버전 정보
 
-- `MARKETING_VERSION = 1.4.8`
-- `CURRENT_PROJECT_VERSION = 19`
-- 이번 배포 번들은 `1.4.8 (19)` 기준입니다.
+- `MARKETING_VERSION = 1.4.9`
+- `CURRENT_PROJECT_VERSION = 20`
+- 이번 배포 번들은 `1.4.9 (20)` 기준입니다.
 
 ---
 
 ## English
 
-### Highlights
+### Bug Fixes
 
-- Added context detection for file browser apps such as Finder.
-  - The current folder title/path now participates in the memo context so folder navigation opens the matching memo session.
-  - Foreground polling also detects folder changes inside the same app.
-
-- Added pinned Library context memos.
-  - The right-side memo cards now show `Pin` / `Unpin` next to `Open Context`.
-  - Pinned memos stack at the top of the Library card list, with the most recently pinned memo first.
-  - Pin state is persisted in settings and survives app relaunches.
-
-- Hardened Calendar tests.
-  - Calendar tests now use dates from the currently visible test month instead of stale fixed dates.
+- Fixed incorrect context detection for Codex, Cmux, and Comet/Chrome-family apps.
+- Fixed Codex contexts staying stuck on the previous thread title after switching to another project or chat.
+- Fixed repeated memo hotkey presses opening the Library window unexpectedly.
+- Fixed the Accessibility review button so it explicitly requests the permission prompt again.
 
 ### Version Metadata
 
-- `MARKETING_VERSION = 1.4.8`
-- `CURRENT_PROJECT_VERSION = 19`
-- This release ships as `1.4.8 (19)`.
+- `MARKETING_VERSION = 1.4.9`
+- `CURRENT_PROJECT_VERSION = 20`
+- This release ships as `1.4.9 (20)`.
 ]]></description>
-            <enclosure url="https://github.com/Dindb-dong/NotchNote-Releases/releases/download/v1.4.8/NotchNote.zip" length="3911313" type="application/octet-stream" sparkle:edSignature="22NGIKhkET+mWHPottsDFh9L+/aHw1xR2aWp4qiabnEr6oI3byWOI+SZ9kOPwHhH/4ZP2IBDUUva/jcOBb6aBA=="></enclosure>
+            <enclosure url="https://github.com/Dindb-dong/NotchNote-Releases/releases/download/v1.4.9/NotchNote.zip" length="3933677" type="application/octet-stream" sparkle:edSignature="mSraBfmotMb7GXYNLCkylE/QhrwX0IRAUB7eDGASUHq06rV1h3PAN4NhYMqWxy6Pwypumt0jYSSH0qnjoXBjBw=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: vimuzi2BUJH0mQ5e6nuzv4WzWAaZvIEwiC1X9oeBsm9Sem+9FVi3dqM0W8kJYrzFIlC0b8pI++0EbThGzpI2Aw==
-length: 3319
+edSignature: MGRs4er578WNQlAicmld3bMzR+Bs7t7ASw/ueAKVcZ1g/dIo4EDMh8K/ia5e8u5+3qdJ7j9EMQWeKleWJEXuCg==
+length: 2522
 -->
