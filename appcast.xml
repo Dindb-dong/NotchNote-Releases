@@ -4,53 +4,63 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>NotchNote</title>
         <item>
-            <title>1.4.10</title>
-            <pubDate>Mon, 08 Jun 2026 03:42:34 +0900</pubDate>
-            <link>https://github.com/Dindb-dong/NotchNote-Releases/releases/tag/v1.4.10</link>
-            <sparkle:version>21</sparkle:version>
-            <sparkle:shortVersionString>1.4.10</sparkle:shortVersionString>
+            <title>1.4.11</title>
+            <pubDate>Sat, 13 Jun 2026 00:00:43 +0900</pubDate>
+            <link>https://github.com/Dindb-dong/NotchNote-Releases/releases/tag/v1.4.11</link>
+            <sparkle:version>22</sparkle:version>
+            <sparkle:shortVersionString>1.4.11</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# NotchNote 1.4.10 Release Notes
+            <description sparkle:format="markdown"><![CDATA[# NotchNote 1.4.11 Release Notes
 
 ## Korean
 
-### 버그 수정
+### 디자인 개선
 
-- 캘린더 권한 요청 버튼을 눌러도 아무 반응이 없어 보이던 문제를 수정했습니다. 권한 요청 후에도 접근이 열리지 않으면 macOS 시스템 설정의 캘린더 권한 화면으로 안내합니다.
-- 투두 알림을 전체 또는 카테고리별로 끌 수 있게 했습니다.
-- 새 설치 기본 알림 방식을 NotchNote 자체 고정 알림이 아니라 macOS 시스템 알림으로 변경했습니다.
-- 노치에서 내려온 메모창의 상단 버튼을 `글로벌 메모로 전환`으로 바꿨습니다. 누르면 현재 메모 카테고리의 글로벌 메모로 바로 전환됩니다.
-- 라이브러리 창에서 메모 편집 포커스가 바깥 클릭이나 앱 전환 뒤에도 계속 남아, 노치 메모에서 바꾼 내용이 바로 동기화되지 않은 것처럼 보이던 문제를 수정했습니다.
+- Library, Settings, Calendar, Backup, Completed Todos, Onboarding, Web editor의 과한 라운딩과 그라데이션을 줄이고 더 차분한 개발자용 생산성 도구 톤으로 다듬었습니다.
+- Library의 카테고리별 좌우 pane에 은은한 카테고리 배경을 추가해 현재 영역과 메모 종류를 더 쉽게 구분할 수 있게 했습니다.
+- 글로벌 퀵 메모 preview와 편집 상태가 빈 메모, 짧은 메모, 긴 메모에서 더 일관된 크기와 표면으로 보이도록 조정했습니다.
+
+### 기능 및 사용성 개선
+
+- Library 사이드바 하단에 설정창 바로가기 톱니 버튼을 추가했습니다.
+- 일반 메모와 글로벌 메모 단축키를 반복해서 누르면 해당 메모창이 닫히고, 서로 다른 단축키를 누르면 일반/글로벌 메모 상태가 바로 전환되도록 개선했습니다.
+- 단축키로 메모를 닫을 때 Library 창이 의도치 않게 다시 나타나는 문제를 수정했습니다.
+- 앱 전환, 버튼 클릭, 화면 전환 중 불필요하게 macOS 시스템 경고음이 나던 흐름을 줄였습니다.
 
 ### 버전 정보
 
-- `MARKETING_VERSION = 1.4.10`
-- `CURRENT_PROJECT_VERSION = 21`
-- 이번 배포 번들은 `1.4.10 (21)` 기준입니다.
+- `MARKETING_VERSION = 1.4.11`
+- `CURRENT_PROJECT_VERSION = 22`
+- 이번 배포 번들은 `1.4.11 (22)` 기준입니다.
 
 ---
 
 ## English
 
-### Bug Fixes
+### Design Improvements
 
-- Fixed the Calendar permission button appearing to do nothing. If access is still unavailable after the request, NotchNote now opens the macOS Calendar privacy settings.
-- Added controls to turn off todo reminders globally or for individual categories.
-- Changed the default reminder delivery for fresh installs to macOS system notifications instead of NotchNote's persistent in-app alert.
-- Changed the top action in the notch memo window to `Switch to Global Memo`. It now switches directly to the current category's global memo.
-- Fixed Library editor focus staying active after outside clicks or app deactivation, which made edits from the notch memo window look out of sync until the Library focus was manually cleared.
+- Refined Library, Settings, Calendar, Backup, Completed Todos, Onboarding, and the Web editor with fewer decorative gradients and oversized rounded surfaces.
+- Added subtle category-tinted pane backgrounds in Library so category-level and context-level memo areas are easier to distinguish.
+- Made global quick memo preview and editing surfaces render more consistently across empty, short, and long memo content.
+
+### Usability Improvements
+
+- Added a gear shortcut in the Library sidebar footer to open Settings directly.
+- Improved regular and global memo shortcuts so pressing the active shortcut closes the memo, while pressing the other shortcut switches memo mode immediately.
+- Fixed the Library window appearing unexpectedly after closing a memo from a shortcut.
+- Reduced unintended macOS alert sounds during app activation, button actions, and view transitions.
 
 ### Version Metadata
 
-- `MARKETING_VERSION = 1.4.10`
-- `CURRENT_PROJECT_VERSION = 21`
-- This release ships as `1.4.10 (21)`.
+- `MARKETING_VERSION = 1.4.11`
+- `CURRENT_PROJECT_VERSION = 22`
+- This release ships as `1.4.11 (22)`.
 ]]></description>
-            <enclosure url="https://github.com/Dindb-dong/NotchNote-Releases/releases/download/v1.4.10/NotchNote.zip" length="3984304" type="application/octet-stream" sparkle:edSignature="zJybQPBjzhaNMALQ1itnExUY+0H0QpUjJMCXuzWIdsmLKvaMFzs2bmwnUGRQraz8MXWYt79L0wRi8i+L3bgBDg=="></enclosure>
+            <enclosure url="https://github.com/Dindb-dong/NotchNote-Releases/releases/download/v1.4.11/NotchNote.zip" length="4003210" type="application/octet-stream" sparkle:edSignature="hhNDsQDHlEALJSr90Oq3loKNlfVAhSgWqWYRnp9kGieVMbYjJwZjfF99W1SB+56kHGoGkk8cKWE34m412VZhAQ=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: lL95Z5l+UdUnMcBkH4GgUjedl5cllRc8C/WYJsiIZuiq0dkmoU4+k66DPnEDYK7kXobrBiKLZj45qx0rK+aXAg==
-length: 3262
+edSignature: jklLF0PJKYi/6qU8h9WdfMg5m95dyTKysODmxuk3mZx/7C9wxatTKaC7HwI7s6X618arRndIntaJknUZKTSNDQ==
+length: 3681
 -->
