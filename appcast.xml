@@ -4,63 +4,95 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>NotchNote</title>
         <item>
-            <title>1.4.11</title>
-            <pubDate>Sat, 13 Jun 2026 00:00:43 +0900</pubDate>
-            <link>https://github.com/Dindb-dong/NotchNote-Releases/releases/tag/v1.4.11</link>
-            <sparkle:version>22</sparkle:version>
-            <sparkle:shortVersionString>1.4.11</sparkle:shortVersionString>
+            <title>1.5.0</title>
+            <pubDate>Sat, 13 Jun 2026 19:44:56 +0900</pubDate>
+            <link>https://github.com/Dindb-dong/NotchNote-Releases/releases/tag/v1.5.0</link>
+            <sparkle:version>23</sparkle:version>
+            <sparkle:shortVersionString>1.5.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# NotchNote 1.4.11 Release Notes
+            <description sparkle:format="markdown"><![CDATA[# NotchNote 1.5.0 Release Notes
 
 ## Korean
 
-### 디자인 개선
+### Assistant Mode
 
-- Library, Settings, Calendar, Backup, Completed Todos, Onboarding, Web editor의 과한 라운딩과 그라데이션을 줄이고 더 차분한 개발자용 생산성 도구 톤으로 다듬었습니다.
-- Library의 카테고리별 좌우 pane에 은은한 카테고리 배경을 추가해 현재 영역과 메모 종류를 더 쉽게 구분할 수 있게 했습니다.
-- 글로벌 퀵 메모 preview와 편집 상태가 빈 메모, 짧은 메모, 긴 메모에서 더 일관된 크기와 표면으로 보이도록 조정했습니다.
+- 새 Assistant Mode를 추가했습니다. 세션이 켜져 있는 동안 활성 앱과 창 컨텍스트 변화를 타임스탬프로 기록하고, 세션 종료 시 하루 작업 흐름을 HTML 리포트로 정리합니다.
+- 마이크 캡처를 추가했습니다. 대화가 끝나면 로컬 Whisper로 음성을 텍스트로 변환하고, 로컬 Ollama 또는 OpenAI-compatible 로컬 에이전트 서버로 요약과 할 일을 추출합니다.
+- 추출된 할 일은 현재 대화와 가장 오래 겹친 앱 컨텍스트의 Library 메모에 체크리스트로만 추가됩니다. 대화 요약은 리포트에만 남겨 메모가 불필요하게 길어지지 않게 했습니다.
+- 긴 회의는 청크 단위로 줄여 요약한 뒤 최종 요약을 만드는 방식으로 처리해 작은 로컬 모델에서도 안정적으로 동작하도록 개선했습니다.
+- 요약 프롬프트에 대화 전후의 앱/창 컨텍스트를 함께 전달해 “어느 화면을 보며 말했는지”를 반영할 수 있게 했습니다.
 
-### 기능 및 사용성 개선
+### Reports and Local Data
 
-- Library 사이드바 하단에 설정창 바로가기 톱니 버튼을 추가했습니다.
-- 일반 메모와 글로벌 메모 단축키를 반복해서 누르면 해당 메모창이 닫히고, 서로 다른 단축키를 누르면 일반/글로벌 메모 상태가 바로 전환되도록 개선했습니다.
-- 단축키로 메모를 닫을 때 Library 창이 의도치 않게 다시 나타나는 문제를 수정했습니다.
-- 앱 전환, 버튼 클릭, 화면 전환 중 불필요하게 macOS 시스템 경고음이 나던 흐름을 줄였습니다.
+- Assistant Reports 창을 추가했습니다. Library 하단의 리포트 버튼에서 세션 리포트를 열고, 최근 리포트 목록과 원본 오디오 링크, 앱 컨텍스트/음성 캡처 타임라인을 확인할 수 있습니다.
+- 리포트의 Activity timeline을 개선해 앱 컨텍스트 바와 음성 캡처 바가 겹치지 않고, 긴 이벤트 목록은 스크롤로 볼 수 있게 했습니다.
+- 무료 사용자 기준으로 Assistant HTML 리포트, 음성 파일, 세션/컨텍스트/음성 메타데이터는 30일이 지나면 로컬에서 자동 정리됩니다.
+- Settings > General 상단에 저장 공간 요약을 추가했습니다. SQLite DB, Assistant Audio, Assistant Reports, 설정 파일, 아바타, 기타 App Support 사용량을 한눈에 볼 수 있습니다.
 
-### 버전 정보
+### Assistant Settings
 
-- `MARKETING_VERSION = 1.4.11`
-- `CURRENT_PROJECT_VERSION = 22`
-- 이번 배포 번들은 `1.4.11 (22)` 기준입니다.
+- Settings에 Assistant 탭을 추가했습니다. Whisper 경로와 모델, 언어 자동 감지/고정 언어, Ollama 모델, 로컬 에이전트 서버 옵션을 설정할 수 있습니다.
+- 설치된 Ollama 모델을 감지하고, Mac 사양에 맞는 작은/중간 모델 추천 UI를 추가했습니다.
+- Whisper와 Ollama가 감지되지 않을 때 설치/다운로드로 이어지는 액션을 Assistant 설정에 표시합니다.
+- 일반적인 `~/whisper-env/bin/whisper`, Homebrew 경로, 사용자 지정 경로를 자동 탐색합니다.
+
+### Notch and Editor Controls
+
+- Assistant 세션이 켜지면 노치 트리거 안에 검정 안경 아이콘이 표시됩니다.
+- 메모 편집기 상단에 Assistant 시작/종료와 마이크 시작/종료 버튼을 추가하고, 기존 Markdown 버튼과 중복 카테고리 배지는 제거했습니다.
+- Stop Assistant는 진행 중인 마이크 녹음까지 함께 종료한 뒤 요약과 리포트 생성을 마무리합니다.
+- Calendar 메뉴의 `Command+C` 단축키를 제거해 일반 복사 동작과 충돌하지 않게 했습니다.
+
+### Version Metadata
+
+- `MARKETING_VERSION = 1.5.0`
+- `CURRENT_PROJECT_VERSION = 23`
+- 이번 배포 번들은 `1.5.0 (23)` 기준입니다.
 
 ---
 
 ## English
 
-### Design Improvements
+### Assistant Mode
 
-- Refined Library, Settings, Calendar, Backup, Completed Todos, Onboarding, and the Web editor with fewer decorative gradients and oversized rounded surfaces.
-- Added subtle category-tinted pane backgrounds in Library so category-level and context-level memo areas are easier to distinguish.
-- Made global quick memo preview and editing surfaces render more consistently across empty, short, and long memo content.
+- Added Assistant Mode. While a session is active, NotchNote records foreground app and window context changes with timestamps, then writes an HTML session report when the session ends.
+- Added microphone capture. Speech is transcribed locally with Whisper, then summarized and converted into todos through Ollama or an OpenAI-compatible local agent server.
+- Extracted todos are appended as checklist items only to the Library memo for the app context that overlapped the conversation the longest. Conversation summaries stay in the report.
+- Long meetings are reduced through chunked intermediate summaries before the final summary, making local models more reliable on longer captures.
+- Assistant prompts now include nearby app/window context around the speech window, so summaries can reflect what the user was looking at during the conversation.
 
-### Usability Improvements
+### Reports and Local Data
 
-- Added a gear shortcut in the Library sidebar footer to open Settings directly.
-- Improved regular and global memo shortcuts so pressing the active shortcut closes the memo, while pressing the other shortcut switches memo mode immediately.
-- Fixed the Library window appearing unexpectedly after closing a memo from a shortcut.
-- Reduced unintended macOS alert sounds during app activation, button actions, and view transitions.
+- Added an Assistant Reports window from the Library footer, with recent reports, original audio links, and a combined app-context/speech-capture timeline.
+- Improved the Activity timeline layout so context bars and speech bars do not collide, and long event lists can scroll.
+- Free local Assistant artifacts, including HTML reports, audio files, and session/context/speech metadata, are automatically cleaned up after 30 days.
+- Added a storage summary at the top of Settings > General for SQLite, Assistant Audio, Assistant Reports, configuration files, avatars, and other App Support data.
+
+### Assistant Settings
+
+- Added a dedicated Assistant settings tab for Whisper path/model/language, Ollama model selection, and OpenAI-compatible local agent server settings.
+- Detects installed Ollama models and recommends small or medium local models based on the Mac's hardware profile.
+- Shows install/download actions when Whisper, Ollama, or the selected Ollama model cannot be detected.
+- Automatically searches common Whisper locations such as `~/whisper-env/bin/whisper`, Homebrew paths, and custom user paths.
+
+### Notch and Editor Controls
+
+- Shows a black eyeglasses indicator inside the notch trigger while Assistant Mode is active.
+- Added Start/Stop Assistant and Start/Stop Mic buttons to the memo editor action row, replacing the old Markdown button and duplicate category badge.
+- Stop Assistant now stops any active microphone recording before finishing the summary and report flow.
+- Removed the Calendar `Command+C` menu shortcut so regular copy behavior is no longer intercepted.
 
 ### Version Metadata
 
-- `MARKETING_VERSION = 1.4.11`
-- `CURRENT_PROJECT_VERSION = 22`
-- This release ships as `1.4.11 (22)`.
+- `MARKETING_VERSION = 1.5.0`
+- `CURRENT_PROJECT_VERSION = 23`
+- This release ships as `1.5.0 (23)`.
 ]]></description>
-            <enclosure url="https://github.com/Dindb-dong/NotchNote-Releases/releases/download/v1.4.11/NotchNote.zip" length="4003210" type="application/octet-stream" sparkle:edSignature="hhNDsQDHlEALJSr90Oq3loKNlfVAhSgWqWYRnp9kGieVMbYjJwZjfF99W1SB+56kHGoGkk8cKWE34m412VZhAQ=="></enclosure>
+            <enclosure url="https://github.com/Dindb-dong/NotchNote-Releases/releases/download/v1.5.0/NotchNote.zip" length="4424939" type="application/octet-stream" sparkle:edSignature="X797BS0AN5Eot/Hnh512KqOHGNYU/m19sslk9bqyofAHm+bWckrzGoNkUSB1ZwhtUbdCl99RofqnVJlVYvlsAA=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: jklLF0PJKYi/6qU8h9WdfMg5m95dyTKysODmxuk3mZx/7C9wxatTKaC7HwI7s6X618arRndIntaJknUZKTSNDQ==
-length: 3681
+edSignature: kc+oiGlc0ttbLCbTJl0itDjwBb9+idyVpYGArsq6aA/cKMa8gOMGOA+xbEzwcr5jAmHafv+k6lVen+e5jj8aAQ==
+length: 7151
 -->
