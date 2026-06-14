@@ -13,6 +13,7 @@ NotchNote는 **지금 작업 중인 맥락(앱/브라우저/프로젝트/세션)
 ### 핵심 기능
 
 - **컨텍스트 메모**: 현재 보고 있는 앱/브라우저/프로젝트 기준으로 메모를 자동 연결합니다.
+- **비서모드(Assistant Mode)**: 활성 앱/창 흐름과 마이크 캡처를 로컬에서 기록하고, Whisper/Ollama 또는 로컬 에이전트 서버로 요약 리포트와 할 일을 생성합니다.
 - **빠른 열기 + 고정 메모창**: hover 또는 전역 단축키로 즉시 열고, pinned 모드로 항상 띄워둘 수 있습니다.
 - **Library 워크스페이스**: 카테고리, 투두, 메모 카드를 한 화면에서 정리할 수 있습니다.
 - **캘린더 워크스페이스**: 날짜 기반 할 일을 관리하고 Google 캘린더 연동 흐름을 지원합니다.
@@ -22,6 +23,7 @@ NotchNote는 **지금 작업 중인 맥락(앱/브라우저/프로젝트/세션)
 ### 부가 기능
 
 - **노트 연결(Linked Notes)**: 관련 있는 컨텍스트를 연결해 하나의 메모를 공유할 수 있습니다.
+- **Assistant Reports**: 앱 컨텍스트/음성 캡처 타임라인, 원본 오디오 링크, 대화 요약을 HTML 리포트로 확인할 수 있습니다.
 - **컨텍스트 바로가기(Open Context)**: 가능한 경우 원래 작업 중이던 파일/프로젝트 창으로 빠르게 복귀할 수 있습니다.
 - **완료 히스토리 + XP/레벨업**: 완료한 투두는 전역 히스토리로 이동하고, 누적 XP 기반으로 레벨이 올라갑니다.
 
@@ -109,6 +111,7 @@ It focuses on fast capture and smooth continuation in the same context.
 ### Key Features
 
 - **Context-aware memos**: Notes are auto-connected to the app/browser/project you are currently using.
+- **Assistant Mode**: Track active app/window activity and optional microphone captures locally, then create summaries, reports, and todos with Whisper/Ollama or a local agent server.
 - **Quick open + pinned window**: Open by hover or global shortcut, then keep the memo visible with pinned mode.
 - **Library workspace**: Organize categories, todos, and memo cards in one place.
 - **Calendar workspace**: Manage date-based tasks and use the Google Calendar sync flow.
@@ -118,6 +121,7 @@ It focuses on fast capture and smooth continuation in the same context.
 ### Extra Features
 
 - **Linked Notes**: Link related contexts so they share one memo body.
+- **Assistant Reports**: Review app-context and speech-capture timelines, original audio links, and conversation summaries in local HTML reports.
 - **Open Context shortcut**: Jump back to the original file/project window when metadata is available.
 - **Completed history + XP/Leveling**: Completed todos move to global history, with level progression based on accumulated XP.
 
