@@ -2,7 +2,9 @@
 ## Recommended macOS version: 26+
 [한국어](#korean) | [English](#english)
 
-![NotchNote app icon](assets/app-logo.png)
+<p align="center">
+  <img src="assets/app-logo.png" alt="NotchNote app icon" width="128">
+</p>
 
 <a id="korean"></a>
 ## 한국어
