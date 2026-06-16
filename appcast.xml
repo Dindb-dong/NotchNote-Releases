@@ -5,7 +5,7 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
         <title>NotchNote</title>
         <item>
             <title>1.5.1</title>
-            <pubDate>Tue, 16 Jun 2026 22:48:19 +0900</pubDate>
+            <pubDate>Tue, 16 Jun 2026 23:13:36 +0900</pubDate>
             <link>https://github.com/Dindb-dong/NotchNote-Releases/releases/tag/v1.5.1</link>
             <sparkle:version>24</sparkle:version>
             <sparkle:shortVersionString>1.5.1</sparkle:shortVersionString>
@@ -45,10 +45,10 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
 - `CURRENT_PROJECT_VERSION = 24`
 - This release ships as `1.5.1 (24)`.
 ]]></description>
-            <enclosure url="https://github.com/Dindb-dong/NotchNote-Releases/releases/download/v1.5.1/NotchNote.zip" length="4456579" type="application/octet-stream" sparkle:edSignature="orx01hHvDOIcqtKCi1aKieR9HTKisG4TQKMcsyj4iz47nhfOIAQwIMndL1OdwS225kiwwc+KOTPbnVSP0I5TBg=="></enclosure>
+            <enclosure url="https://github.com/Dindb-dong/NotchNote-Releases/releases/download/v1.5.1/NotchNote.zip" length="4450226" type="application/octet-stream" sparkle:edSignature="yZGqI/X4+Br6jVRvbvsgsGqyFi0SoDDAdWQ0XwBjVCmBt0dORX+kKkSW0SHWvVifQArd5UA7WzYXkHUOAG0iDw=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: yDsfAwIEEk8Df0S7hxPzuaZAXxZLb6TGj5pMG7ntLUyQTQ86bFoq/A3dOW3BmIIlxtj0KmchhuNK6T01RDS2DA==
+edSignature: pHmaXlV4FknqJaDHNjwLKGm3hmLnlHMXO3Q5gkHJxv2MflicX083DrdKWW23M/kc5/7MCDlz+tnCfx84JIPWAA==
 length: 2758
 -->
