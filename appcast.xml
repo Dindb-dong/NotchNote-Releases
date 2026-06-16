@@ -4,51 +4,49 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>NotchNote</title>
         <item>
-            <title>1.5.1</title>
-            <pubDate>Tue, 16 Jun 2026 23:13:36 +0900</pubDate>
-            <link>https://github.com/Dindb-dong/NotchNote-Releases/releases/tag/v1.5.1</link>
-            <sparkle:version>24</sparkle:version>
-            <sparkle:shortVersionString>1.5.1</sparkle:shortVersionString>
+            <title>1.5.2</title>
+            <pubDate>Wed, 17 Jun 2026 07:13:03 +0900</pubDate>
+            <link>https://github.com/Dindb-dong/NotchNote-Releases/releases/tag/v1.5.2</link>
+            <sparkle:version>25</sparkle:version>
+            <sparkle:shortVersionString>1.5.2</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# NotchNote 1.5.1 Release Notes
+            <description sparkle:format="markdown"><![CDATA[# NotchNote 1.5.2 Release Notes
 
 ## Korean
 
-### Dock 및 앱 전환기 옵션
+### 사소한 버그 수정
 
-- Settings > General에 Dock 및 앱 전환기 옵션을 추가했습니다.
-- 새 옵션을 켜면 NotchNote 창이 열려 있지 않을 때 Dock과 Command-Tab 앱 전환기에서 앱을 숨겨, 평소 Notch 중심 사용 흐름을 더 백그라운드 유틸리티처럼 유지합니다.
-- Library, Settings, Calendar, Backup 같은 일반 창을 열면 NotchNote가 다시 일반 앱처럼 Dock과 앱 전환기에 표시됩니다.
-- Dock 아이콘을 숨긴 상태에서도 메뉴바의 NotchNote 아이콘을 클릭해 Library와 Settings 창을 열 수 있습니다.
+- 마이크 권한 허용 버튼을 눌렀을 때 macOS 개인정보 보호 및 보안 설정에 NotchNote가 제대로 나타나도록 수정했습니다.
+- 메뉴 막대 아이콘이 보이지 않거나 잘못된 임시 아이콘으로 표시되던 문제를 수정했습니다.
+- 메뉴 막대 아이콘을 NotchNote 로고 형태로 교체해 앱과 더 일관되게 보이도록 했습니다.
 
 ### Version Metadata
 
-- `MARKETING_VERSION = 1.5.1`
-- `CURRENT_PROJECT_VERSION = 24`
-- 이번 배포 번들은 `1.5.1 (24)` 기준입니다.
+- `MARKETING_VERSION = 1.5.2`
+- `CURRENT_PROJECT_VERSION = 25`
+- 이번 배포 번들은 `1.5.2 (25)` 기준입니다.
 
 ---
 
 ## English
 
-### Dock and App Switcher Option
+### Minor Bug Fixes
 
-- Added a Dock and App Switcher option in Settings > General.
-- When enabled, NotchNote hides from the Dock and Command-Tab app switcher while no NotchNote window is open, making everyday notch-first use feel more like a background utility.
-- Opening regular windows such as Library, Settings, Calendar, or Backup brings NotchNote back as a normal app in the Dock and app switcher.
-- Even when the Dock icon is hidden, you can open Library and Settings from the NotchNote menu bar icon.
+- Fixed microphone permission handling so NotchNote appears correctly in macOS Privacy & Security settings after requesting microphone access.
+- Fixed menu bar visibility issues and removed the temporary generic menu bar icon.
+- Replaced the menu bar item image with a NotchNote logo-style icon for a more consistent app identity.
 
 ### Version Metadata
 
-- `MARKETING_VERSION = 1.5.1`
-- `CURRENT_PROJECT_VERSION = 24`
-- This release ships as `1.5.1 (24)`.
+- `MARKETING_VERSION = 1.5.2`
+- `CURRENT_PROJECT_VERSION = 25`
+- This release ships as `1.5.2 (25)`.
 ]]></description>
-            <enclosure url="https://github.com/Dindb-dong/NotchNote-Releases/releases/download/v1.5.1/NotchNote.zip" length="4450226" type="application/octet-stream" sparkle:edSignature="yZGqI/X4+Br6jVRvbvsgsGqyFi0SoDDAdWQ0XwBjVCmBt0dORX+kKkSW0SHWvVifQArd5UA7WzYXkHUOAG0iDw=="></enclosure>
+            <enclosure url="https://github.com/Dindb-dong/NotchNote-Releases/releases/download/v1.5.2/NotchNote.zip" length="7540204" type="application/octet-stream" sparkle:edSignature="bmf5zrbxN3wNWbTbf12iqG/cu9ZSFNJ7w9jvOCsTcbDFGw/rY5QFNLDqU9vTCUIHau+edm7AERKOOzo+J/HUBg=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: pHmaXlV4FknqJaDHNjwLKGm3hmLnlHMXO3Q5gkHJxv2MflicX083DrdKWW23M/kc5/7MCDlz+tnCfx84JIPWAA==
-length: 2758
+edSignature: 1q/wCYfkzBK4Ue6Eh1DdvgxIBaMlgt5PV9l4OKknMStsR6EGS1skC2y2/c7qM4sVmUkBO8Hp3fxWaIgKzXH0CQ==
+length: 2408
 -->
