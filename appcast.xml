@@ -4,49 +4,59 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>NotchNote</title>
         <item>
-            <title>1.5.2</title>
-            <pubDate>Wed, 17 Jun 2026 07:13:03 +0900</pubDate>
-            <link>https://github.com/Dindb-dong/NotchNote-Releases/releases/tag/v1.5.2</link>
-            <sparkle:version>25</sparkle:version>
-            <sparkle:shortVersionString>1.5.2</sparkle:shortVersionString>
+            <title>1.5.3</title>
+            <pubDate>Wed, 17 Jun 2026 22:11:31 +0900</pubDate>
+            <link>https://github.com/Dindb-dong/NotchNote-Releases/releases/tag/v1.5.3</link>
+            <sparkle:version>26</sparkle:version>
+            <sparkle:shortVersionString>1.5.3</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# NotchNote 1.5.2 Release Notes
+            <description sparkle:format="markdown"><![CDATA[# NotchNote 1.5.3 Release Notes
 
 ## Korean
 
-### 사소한 버그 수정
+### 메뉴 막대 안정화
 
-- 마이크 권한 허용 버튼을 눌렀을 때 macOS 개인정보 보호 및 보안 설정에 NotchNote가 제대로 나타나도록 수정했습니다.
-- 메뉴 막대 아이콘이 보이지 않거나 잘못된 임시 아이콘으로 표시되던 문제를 수정했습니다.
-- 메뉴 막대 아이콘을 NotchNote 로고 형태로 교체해 앱과 더 일관되게 보이도록 했습니다.
+- 1.5.2에서 메뉴 막대 아이콘을 별도 helper 앱/agent로 띄우던 구조를 제거하고, NotchNote 본체가 직접 표준 `NSStatusItem`을 생성하도록 되돌렸습니다.
+- macOS 로그인 항목 및 백그라운드 항목 설정에 `NotchNoteMenuBarAgent` 같은 별도 앱 흔적이 새로 등록되지 않도록 정리했습니다.
+- 메뉴 막대 아이콘을 NotchNote 로고형 템플릿 아이콘으로 복구했습니다.
+
+### Dock 표시 복구
+
+- Library, Calendar, Settings, Backup, Onboarding 같은 표준 창을 열었을 때 Dock 및 Command-Tab에 NotchNote가 다시 나타나도록 수정했습니다.
+- 표준 창이 모두 닫힌 뒤에는 사용자의 Dock 숨김 설정에 맞춰 다시 유틸리티 모드로 돌아갑니다.
 
 ### Version Metadata
 
-- `MARKETING_VERSION = 1.5.2`
-- `CURRENT_PROJECT_VERSION = 25`
-- 이번 배포 번들은 `1.5.2 (25)` 기준입니다.
+- `MARKETING_VERSION = 1.5.3`
+- `CURRENT_PROJECT_VERSION = 26`
+- 이번 배포 번들은 `1.5.3 (26)` 기준입니다.
 
 ---
 
 ## English
 
-### Minor Bug Fixes
+### Menu Bar Stabilization
 
-- Fixed microphone permission handling so NotchNote appears correctly in macOS Privacy & Security settings after requesting microphone access.
-- Fixed menu bar visibility issues and removed the temporary generic menu bar icon.
-- Replaced the menu bar item image with a NotchNote logo-style icon for a more consistent app identity.
+- Removed the separate helper app/agent path used for the 1.5.2 menu bar item and restored a direct `NSStatusItem` owned by the main NotchNote app.
+- Prevented new `NotchNoteMenuBarAgent`-style entries from being registered in macOS Login Items and Background Items settings.
+- Restored the NotchNote logo-style template icon in the menu bar.
+
+### Dock Visibility Fix
+
+- Fixed Library, Calendar, Settings, Backup, and Onboarding windows so NotchNote appears in the Dock and Command-Tab while standard windows are open.
+- When all standard windows are closed, NotchNote returns to utility mode according to the user's Dock-hiding preference.
 
 ### Version Metadata
 
-- `MARKETING_VERSION = 1.5.2`
-- `CURRENT_PROJECT_VERSION = 25`
-- This release ships as `1.5.2 (25)`.
+- `MARKETING_VERSION = 1.5.3`
+- `CURRENT_PROJECT_VERSION = 26`
+- This release ships as `1.5.3 (26)`.
 ]]></description>
-            <enclosure url="https://github.com/Dindb-dong/NotchNote-Releases/releases/download/v1.5.2/NotchNote.zip" length="7540204" type="application/octet-stream" sparkle:edSignature="bmf5zrbxN3wNWbTbf12iqG/cu9ZSFNJ7w9jvOCsTcbDFGw/rY5QFNLDqU9vTCUIHau+edm7AERKOOzo+J/HUBg=="></enclosure>
+            <enclosure url="https://github.com/Dindb-dong/NotchNote-Releases/releases/download/v1.5.3/NotchNote.zip" length="4461026" type="application/octet-stream" sparkle:edSignature="TfPAmPpHoeyrzMH5Z9af4XxDyD1aUfae9A10Otw0zeAt/TlkrEnGl64SJFeA1/3VoH7nOkNe9m39P6Bobw4fCg=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: 1q/wCYfkzBK4Ue6Eh1DdvgxIBaMlgt5PV9l4OKknMStsR6EGS1skC2y2/c7qM4sVmUkBO8Hp3fxWaIgKzXH0CQ==
-length: 2408
+edSignature: posAvAJ0v+5NF46prI3vv0Z1073tWR++QpiKSWJW5NwHRoZXsln4W/iPWOJ5Yw1wn+ZH/21L5hUCgUyDEgm1CQ==
+length: 3095
 -->
